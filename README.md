@@ -9,7 +9,7 @@
 
 - Michaud, Olivier (300513322): olimich827-hash
 
-- Velker, Zachary (300460928): Velker878
+- Velker, Zachary (300414525): Velker878
 
 - Gamache, Jean-François (300420444): 8x5y1a
 
