@@ -2,10 +2,70 @@
   display: none;
 }
 
+html,
 body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
 canvas {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+}
+
+.placeholderNav {
+  background-color: rgb(10, 4, 59);
+  height: 50px;
+  width: 100%;
+  top: 0;
+  color: white;
+}
+
+.screen {
+  background-color: #0f375c;
+  width: 33%;
+  height: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  border-radius: 30px;
+  /* box-shadow Source: https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.screenContent {
+  padding: 15px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 30px;
+  border-color: #3c77a7;
+  background-color: #3c77a7;
+  border: none;
+  color: #ebebeb;
+  font-size: large;
+}
+
+.button:hover {
+  background-color: #519ddb;
+  cursor: pointer;
+}
+
+.infoContainer {
+  padding: 10px;
 }
