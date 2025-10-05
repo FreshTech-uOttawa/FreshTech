@@ -60,16 +60,27 @@ canvas {
   text-align: center;
   margin: auto;
   display: flex;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   border: 2px white solid;
-  text-shadow: 0 0 8px #fff, 0 0 2px #00c8ff;
-  animation: fade-in ease-in-out 3000ms 250ms forwards;
+  text-shadow: 0 0 8px #fff, 0 0 2px #00c8ff00;
+  animation: fade-in ease-in-out 3000ms forwards,
+    breathing-btn ease-in-out 3250ms 250ms infinite;
   opacity: 0;
-  transition: all 500ms;
+  transition: all 600ms;
 }
 
 .begin-simulation-btn:hover {
-  background-color: #0f375c;
+  background-color: #0f375c81;
+}
+
+@keyframes breathing-btn {
+  0%,
+  100% {
+    box-shadow: #00c8ff 0 0 15px 0.03px;
+  }
+  50% {
+    box-shadow: #00c8ff 0 0 15px 3px;
+  }
 }
 
 .info-container {
@@ -85,8 +96,8 @@ canvas {
   text-align: center;
   margin-bottom: 20vh;
   color: white;
-  text-shadow: 0 0 8px #fff, 0 0 16px #00c8ff;
-  animation: fade-in ease-in-out 3000ms, title-glow 3000ms ease-in-out infinite;
+  text-shadow: 0 0 15px #fff, 0 0 35px #00c8ff;
+  /* animation: fade-in ease-in-out 3000ms;  */
   z-index: 2;
   position: relative;
 }
