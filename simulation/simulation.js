@@ -44,7 +44,7 @@ function setupStars() {
 
     positions.push(x, y, z);
 
-    // White 60% Chance
+    // White 50% Chance
     let r = 0.8 + Math.random() * 0.2;
     let g = 0.8 + Math.random() * 0.2;
     let b = 0.8 + Math.random() * 0.2;
@@ -61,6 +61,12 @@ function setupStars() {
       b = 255 / 255;
       g = 51 / 255;
       r = 51 / 255;
+    }
+    // Red 10% Chance
+    else if (tintType === 9) {
+      b = 50 / 255;
+      g = 50 / 255;
+      r = 255 / 255;
     }
 
     colors.push(r, g, b, 0.8);
