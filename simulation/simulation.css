@@ -23,7 +23,7 @@ canvas {
 }
 
 .placeholderNav {
-  background-color: rgb(10, 4, 59);
+  background-color: #04192d;
   height: 50px;
   width: 100%;
   top: 0;
@@ -32,26 +32,9 @@ canvas {
   position: relative;
 }
 
-.screen {
-  display: none;
-  background-color: #0f375c;
-  width: 33%;
-  height: 50%;
-  position: absolute;
-  left: 67.5%;
-  top: 77%;
-  transform: translate(-50%, -50%);
-  color: white;
-  z-index: 1;
-  border-radius: 30px;
-  /* box-shadow Source: https://getcssscan.com/css-box-shadow-examples */
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
-    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
-}
-
-.screen-content {
-  padding: 15px;
-}
+/** ############### **/
+/** Button Classes  **/
+/** ############### **/
 
 .button {
   width: 100%;
@@ -65,35 +48,62 @@ canvas {
   font-size: large;
 }
 
-.begin-simulation-btn {
-  width: 25%;
-  text-align: center;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
 .button:hover {
   background-color: #519ddb;
   cursor: pointer;
+}
+
+.begin-simulation-btn {
+  font-size: x-large;
+  width: auto;
+  padding: 15px 30px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  background-color: black;
+  border: 2px white solid;
+  text-shadow: 0 0 8px #fff, 0 0 2px #00c8ff;
+  animation: fade-in ease-in-out 3000ms 250ms forwards;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.begin-simulation-btn:hover {
+  background-color: #0f375c;
 }
 
 .info-container {
   padding: 10px;
 }
 
+/** ############### **/
+/** Title Style  **/
+/** ############### **/
 .title {
   margin-top: 8vh;
-  font-size: 5vw;
+  font-size: 5vw; /*TODO: Fix the font size (it's way too small on mobile)*/
   text-align: center;
   margin-bottom: 20vh;
   color: white;
-  text-shadow: 0 0 10px #ffffff;
-  animation: fade-in ease-in-out 3000ms;
+  text-shadow: 0 0 8px #fff, 0 0 16px #00c8ff;
+  animation: fade-in ease-in-out 3000ms, title-glow 3000ms ease-in-out infinite;
   z-index: 2;
   position: relative;
 }
 
+@keyframes title-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 8px #fff, 0 0 16px #00c8ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #00c8ff;
+  }
+}
+
+/** ################### **/
+/** General Animations  **/
+/** ################### **/
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -119,6 +129,10 @@ canvas {
   }
 }
 
+/** ################################# **/
+/** Fridge and Fridge Screen Classes  **/
+/** ################################# **/
+
 .fridge-container {
   margin: auto;
   text-align: center;
@@ -128,4 +142,24 @@ canvas {
 
 .fridge-animation {
   animation: fridge-animation 3000ms ease-in-out forwards;
+}
+.screen {
+  display: none;
+  background-color: #0f375c;
+  width: 33%;
+  height: 50%;
+  position: absolute;
+  left: 67.5%;
+  top: 77%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  border-radius: 30px;
+  /* box-shadow Source: https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.screen-content {
+  padding: 15px;
 }
