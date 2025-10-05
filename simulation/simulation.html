@@ -4,21 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Polaris - Simulation</title>
-    <script type="module" src="simulation.js" defer></script>
+    <script type="module" src="star_background.js" defer></script>
+    <script src="simulation.js" defer></script>
     <link rel="stylesheet" href="simulation.css" />
   </head>
   <body>
     <nav>
       <div class="placeholderNav">
-        <div>test</div>
+        <div>Place holder menu</div>
       </div>
     </nav>
+
+    <h1 class="title">Simulation</h1>
+
+    <button class="button begin-simulation-btn" onclick="beginSimulation()">
+      Begin Simulation
+    </button>
+
+    <div class="fridge-container">
+      <img
+        class="fridge_image"
+        src="fridge_Test2.png"
+        alt="Image of a fridge"
+        width="50%"
+        height="60%"
+      />
+    </div>
+
     <div class="screen">
-      <div class="screenContent">
+      <div class="screen-content">
         <button class="button">Inventory</button>
         <button class="button">Recipes</button>
         <button class="button">Order</button>
-        <div class="infoContainer">
+        <div class="info-container">
           <div>
             <h1>Apple</h1>
             <div>some text</div>
