@@ -25,6 +25,10 @@ html {
   position: relative;
 }
 
+.m-l {
+  margin-left: 10px;
+}
+
 /** ############### **/
 /** Button Classes  **/
 /** ############### **/
@@ -80,7 +84,7 @@ button:hover {
   }
 }
 
-.info-container {
+.card {
   padding: 10px;
 }
 
@@ -153,7 +157,14 @@ button:hover {
 }
 .screen {
   display: none;
-  background-color: #0f375c;
+  /* display: flex; */
+
+  /* Radial gradiant created with https://cssgradient.io */
+  background-image: radial-gradient(
+    circle 382px at 50% 50.2%,
+    #1d598f 0.1%,
+    #04192d 100.2%
+  );
   width: 33%;
   height: 50%;
   position: absolute;
@@ -166,10 +177,54 @@ button:hover {
   /* box-shadow Source: https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  flex-direction: column;
+  padding: 15px;
 }
 
-.screen-content {
+.card {
+  border-color: #1d598f;
+  background-color: #1d598f;
+  box-shadow: 0px 0px 10px black;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 30px;
+  border: none;
+  color: #ebebeb;
+  font-size: large;
+  flex: 1;
+}
+
+.card h1 {
+  margin: 0px;
+  font-size: 150%;
+}
+
+/* TODO: Find a good with / height that can be adapted based screen size */
+.item-image {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.item-container {
   padding: 15px;
+}
+
+.item {
+  padding: 2px;
+  margin: 6px 0;
+}
+
+.item:hover {
+  background-color: #3c77a7;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /** ######################## **/

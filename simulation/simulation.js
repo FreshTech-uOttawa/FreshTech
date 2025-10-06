@@ -6,7 +6,7 @@ function beginSimulation() {
   beginBtn.style.display = "none";
   fridgeContainer.classList.add("fridge-animation");
   setTimeout(() => {
-    screen.style.display = "block";
+    screen.style.display = "flex";
   }, 3000);
 
   //TODO: Fade out button
