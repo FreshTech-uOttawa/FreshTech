@@ -23,13 +23,6 @@ camera.position.y = -10;
 renderer.render(scene, camera);
 setupCameraMovement();
 
-/** Event Listeners */
-window.addEventListener("resize", moveCamera());
-
-document
-  .querySelector(".begin-simulation-btn")
-  .addEventListener("click", beginSimulation);
-
 /**
  * Function which setups the stars geometry by finding: random position, random color, random star animation speed, random star
  */
@@ -167,15 +160,6 @@ function changeOpacity(stars) {
 }
 
 /**
- * Function which moves the camera based on the cursor position
- */
-function moveCamera() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
-
-/**
  * Function which simulates travel through space time by moving the camera position forward
  * After the animation is done, it stops all animations and dims the background.
  */
@@ -203,3 +187,15 @@ async function beginSimulation() {
   }),
     500;
 }
+
+/** Event Listeners */
+/** Function which resizes the canva if there was a change to the size of the screen */
+window.addEventListener("resize", () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+document
+  .querySelector(".begin-simulation-btn")
+  .addEventListener("click", beginSimulation);
