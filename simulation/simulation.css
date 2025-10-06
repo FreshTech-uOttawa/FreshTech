@@ -29,21 +29,25 @@ html {
 /** Button Classes  **/
 /** ############### **/
 
-.button {
+button {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
   border-radius: 30px;
-  border-color: #3c77a7;
-  background-color: #3c77a7;
   border: none;
   color: #ebebeb;
   font-size: large;
 }
 
-.button:hover {
-  background-color: #519ddb;
+button:hover {
+  background-color: #3c77a7;
   cursor: pointer;
+}
+
+.screen-btn {
+  border-color: #1d598f;
+  background-color: #1d598f;
+  box-shadow: 0px 0px 10px black;
 }
 
 .begin-simulation-btn {
@@ -89,7 +93,7 @@ html {
   text-align: center;
   margin-bottom: 20vh;
   color: white;
-  text-shadow: 0 0 15px #fff, 0 0 35px #00c8ff;
+  text-shadow: 0 0 10px #fff, 0 0 25px #00c8ff;
   /* animation: fade-in ease-in-out 3000ms;  */
   z-index: 2;
   position: relative;
