@@ -11,15 +11,8 @@ body {
   font-family: roboto;
 }
 
-canvas {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: block;
+html {
+  background-color: black;
 }
 
 .placeholderNav {
@@ -173,4 +166,32 @@ canvas {
 
 .screen-content {
   padding: 15px;
+}
+
+/** ######################## **/
+/** Space Background Classes **/
+/** ######################## **/
+canvas {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+}
+
+.dim-background {
+  animation: dimdown 500ms forwards ease-in;
+}
+
+@keyframes dimdown {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
 }

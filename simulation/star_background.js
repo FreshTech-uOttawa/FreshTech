@@ -1,5 +1,3 @@
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js";
-// import * as THREE from "three";
 // Some part of the code is directly taken from the documentation of Threejs (https://threejs.org/docs) with light and or heavy changes.
 
 // General Scene setup
@@ -15,13 +13,22 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+let isAnimating = true;
 const starPhases = [];
 const starSpeeds = [];
 setupStars();
-camera.position.z = 5;
-camera.position.x = -15;
+camera.position.z = 50;
+camera.position.x = -10;
+camera.position.y = -10;
 renderer.render(scene, camera);
 setupCameraMovement();
+
+/** Event Listeners */
+window.addEventListener("resize", moveCamera());
+
+document
+  .querySelector(".begin-simulation-btn")
+  .addEventListener("click", beginSimulation);
 
 /**
  * Function which setups the stars geometry by finding: random position, random color, random star animation speed, random star
@@ -108,6 +115,9 @@ function setupCameraMovement() {
   let currentRotationY = 0;
 
   addEventListener("mousemove", (event) => {
+    if (!isAnimating) {
+      return;
+    }
     const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
     const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
@@ -117,6 +127,10 @@ function setupCameraMovement() {
 
   let frameCount = 0;
   function animate() {
+    if (!isAnimating) {
+      return;
+    }
+
     requestAnimationFrame(animate);
 
     currentRotationX += (targetRotationX - currentRotationX) * 0.05;
@@ -126,9 +140,9 @@ function setupCameraMovement() {
     camera.rotation.y = -currentRotationY;
 
     frameCount++;
-    if (frameCount % 10 === 0) {
-      changeOpacity(scene.children.find((obj) => obj.type === "Points"));
-    }
+    // if (frameCount % 10 === 0) {
+    changeOpacity(scene.children.find((obj) => obj.type === "Points"));
+    // }
     renderer.render(scene, camera);
   }
 
@@ -145,18 +159,47 @@ function changeOpacity(stars) {
 
   for (let index = 0; index < colors.length / 4; index++) {
     const alphaIndex = index * 4 + 3;
-    colors[alphaIndex] =
-      0.3 +
-      0.7 *
-        Math.abs(Math.sin(Date.now() * starSpeeds[index] + starPhases[index]));
+    const speed = Date.now() * starSpeeds[index] + starPhases[index];
+    colors[alphaIndex] = 0.3 + 0.7 * Math.abs(Math.sin(speed));
   }
 
   stars.geometry.attributes.color.needsUpdate = true;
 }
 
-// Resizing canva if the screen size is changed
-window.addEventListener("resize", () => {
+/**
+ * Function which moves the camera based on the cursor position
+ */
+function moveCamera() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
-});
+}
+
+/**
+ * Function which simulates travel through space time by moving the camera position forward
+ * After the animation is done, it stops all animations and dims the background.
+ */
+async function beginSimulation() {
+  await gsap.to(camera.position, {
+    x: 0,
+    y: 0,
+    z: -300,
+    duration: 1.5,
+    ease: "power2.in",
+  });
+
+  camera.position.set(0, 0, 1300);
+  await gsap.to(camera.position, {
+    x: 0,
+    y: 0,
+    z: 0,
+    duration: 1.5,
+    ease: "power2.Out",
+  });
+
+  document.querySelector("canvas").classList.add("dim-background");
+  setTimeout(() => {
+    isAnimating = false;
+  }),
+    500;
+}
