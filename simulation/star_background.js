@@ -120,10 +120,6 @@ function setupCameraMovement() {
 
   let frameCount = 0;
   function animate() {
-    if (!isAnimating) {
-      return;
-    }
-
     requestAnimationFrame(animate);
 
     currentRotationX += (targetRotationX - currentRotationX) * 0.05;
@@ -181,7 +177,7 @@ async function beginSimulation() {
     ease: "power2.Out",
   });
 
-  document.querySelector("canvas").classList.add("dim-background");
+  // document.querySelector("canvas").classList.add("dim-background");
   setTimeout(() => {
     isAnimating = false;
   }),

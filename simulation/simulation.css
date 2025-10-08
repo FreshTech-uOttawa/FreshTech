@@ -93,7 +93,7 @@ button:hover {
 /** Title Style  **/
 /** ############### **/
 .title {
-  margin-top: 8vh;
+  margin-top: 1vh;
   font-size: 5vw; /*TODO: Fix the font size (it's way too small on mobile)*/
   text-align: center;
   color: white;
@@ -101,6 +101,7 @@ button:hover {
   /* animation: fade-in ease-in-out 3000ms;  */
   z-index: 2;
   position: relative;
+  margin-bottom: 0;
 }
 
 @keyframes title-glow {
@@ -141,20 +142,10 @@ button:hover {
   }
 }
 
-/** ################################# **/
-/** Fridge and Fridge Screen Classes  **/
-/** ################################# **/
+/** ############### **/
+/** Screen Classes  **/
+/** ############### **/
 
-.fridge-container {
-  margin: auto;
-  text-align: center;
-  transform: scale(0.5);
-  opacity: 0;
-}
-
-.fridge-animation {
-  animation: fridge-animation 3000ms ease-in-out forwards;
-}
 .screen {
   display: none;
   /* display: flex; */
@@ -253,4 +244,55 @@ canvas {
   100% {
     opacity: 0.1;
   }
+}
+
+/** ############### **/
+/** Fridge Classes  **/
+/** ############### **/
+
+.frigo-container {
+  text-align: center;
+  display: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+.frigo {
+  width: 1%;
+  opacity: 0;
+}
+
+.frigo-animation {
+  animation: 900ms frigo-animation ease-in-out forwards;
+}
+
+@keyframes frigo-animation {
+  0% {
+    opacity: 0;
+    width: 1%;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    width: 40%;
+    opacity: 1;
+  }
+}
+
+/** ############### **/
+/** Star Classes  **/
+/** ############### **/
+.star_logo {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+}
+
+.interactable {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  position: fixed;
 }
