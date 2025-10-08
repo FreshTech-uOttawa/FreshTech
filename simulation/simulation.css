@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: roboto;
+}
+
+html {
+  background-color: black;
+}
+
+.placeholderNav {
+  background-color: #04192d;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  color: white;
+  z-index: 3;
+  position: relative;
+}
+
+.m-l {
+  margin-left: 10px;
+}
+
+/** ############### **/
+/** Button Classes  **/
+/** ############### **/
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 30px;
+  border: none;
+  color: #ebebeb;
+  font-size: large;
+}
+
+button:hover {
+  background-color: #3c77a7;
+  cursor: pointer;
+}
+
+.screen-btn {
+  border-color: #1d598f;
+  background-color: #1d598f;
+  box-shadow: 0px 0px 10px black;
+}
+
+.begin-simulation-btn {
+  font-size: x-large;
+  width: auto;
+  padding: 15px 30px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px white solid;
+  text-shadow: 0 0 8px #fff, 0 0 2px #00c8ff00;
+  animation: fade-in ease-in-out 3000ms forwards,
+    breathing-btn ease-in-out 3250ms 250ms infinite;
+  opacity: 0;
+  transition: all 600ms;
+  margin-top: 20vh;
+}
+
+.begin-simulation-btn:hover {
+  background-color: #0f375c81;
+}
+
+@keyframes breathing-btn {
+  0%,
+  100% {
+    box-shadow: #00c8ff 0 0 15px 0.03px;
+  }
+  50% {
+    box-shadow: #00c8ff 0 0 15px 3px;
+  }
+}
+
+.card {
+  padding: 10px;
+}
+
+/** ############### **/
+/** Title Style  **/
+/** ############### **/
+.title {
+  margin-top: 1vh;
+  font-size: 5vw; /*TODO: Fix the font size (it's way too small on mobile)*/
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 25px #00c8ff;
+  /* animation: fade-in ease-in-out 3000ms;  */
+  z-index: 2;
+  position: relative;
+  margin-bottom: 0;
+}
+
+@keyframes title-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 8px #fff, 0 0 16px #00c8ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #00c8ff;
+  }
+}
+
+/** ################### **/
+/** General Animations  **/
+/** ################### **/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fridge-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    scale: 2;
+    transform: scale(0.7);
+  }
+}
+
+/** ############### **/
+/** Screen Classes  **/
+/** ############### **/
+
+.screen {
+  display: none;
+  /* display: flex; */
+
+  /* Radial gradiant created with https://cssgradient.io */
+  background-image: radial-gradient(
+    circle 382px at 50% 50.2%,
+    #1d598f 0.1%,
+    #04192d 100.2%
+  );
+  width: 33%;
+  height: 50%;
+  position: absolute;
+  left: 67.5%;
+  top: 77%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  border-radius: 30px;
+  /* box-shadow Source: https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card {
+  border-color: #1d598f;
+  background-color: #1d598f;
+  box-shadow: 0px 0px 10px black;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 30px;
+  border: none;
+  color: #ebebeb;
+  font-size: large;
+  flex: 1;
+}
+
+.card h1 {
+  margin: 0px;
+  font-size: 150%;
+}
+
+/* TODO: Find a good with / height that can be adapted based screen size */
+.item-image {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.item-container {
+  padding: 15px;
+}
+
+.item {
+  padding: 2px;
+  margin: 6px 0;
+}
+
+.item:hover {
+  background-color: #3c77a7;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/** ######################## **/
+/** Space Background Classes **/
+/** ######################## **/
+canvas {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+}
+
+.dim-background {
+  animation: dimdown 500ms forwards ease-in;
+}
+
+@keyframes dimdown {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/** ############### **/
+/** Fridge Classes  **/
+/** ############### **/
+
+.frigo-container {
+  text-align: center;
+  display: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+.frigo {
+  width: 1%;
+  opacity: 0;
+}
+
+.frigo-animation {
+  animation: 900ms frigo-animation ease-in-out forwards;
+}
+
+@keyframes frigo-animation {
+  0% {
+    opacity: 0;
+    width: 1%;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    width: 40%;
+    opacity: 1;
+  }
+}
+
+/** ############### **/
+/** Star Classes  **/
+/** ############### **/
+.star_logo {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+}
+
+.interactable {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+}
