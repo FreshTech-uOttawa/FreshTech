@@ -9,6 +9,10 @@
     <script type="module" src="star_background.js" defer></script>
     <script src="simulation.js" defer></script>
     <link rel="stylesheet" href="simulation.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <nav>
@@ -35,7 +39,7 @@
       <div class="interactable"></div>
     </div>
 
-    <div class="screen">
+    <!-- <div class="screen">
       <button class="screen-btn">Inventory</button>
       <button class="screen-btn">Recipes</button>
       <button class="screen-btn">Order</button>
@@ -87,6 +91,41 @@
               style="object-fit: contain"
             />
           </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="screen">
+      <div class="top-bar">
+        <h3>Date</h3>
+        <h3>Time</h3>
+      </div>
+      <h1 style="text-align: center; margin: 0">Polaris</h1>
+      <!-- Page Content -->
+      <div class="content">Content goes here...</div>
+
+      <!-- Bottom Menu -->
+      <hr style="width: 110%" />
+      <div class="bottom-menu">
+        <div class="menu-item selected">
+          <i class="material-icons">home</i>
+          <span>Home</span>
+        </div>
+        <div class="menu-item">
+          <i class="material-icons">kitchen</i>
+          <span>Inventory</span>
+        </div>
+        <div class="menu-item">
+          <i class="material-icons">shopping_cart</i>
+          <span>Order</span>
+        </div>
+        <div class="menu-item">
+          <i class="material-icons">menu_book</i>
+          <span>Recipes</span>
+        </div>
+        <div class="menu-item">
+          <i class="material-icons">settings</i>
+          <span>Settings</span>
         </div>
       </div>
     </div>
