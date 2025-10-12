@@ -2,8 +2,18 @@ const app = document.querySelector(".screen");
 const beginBtn = document.querySelector(".begin-simulation-btn");
 const frigoContainer = document.querySelector(".frigo-container");
 const frigo = document.querySelector(".frigo");
-const star_logo = document.querySelector(".star_logo");
+const starLogo = document.querySelector(".star_logo");
 const screenInteract = document.querySelector(".interactable");
+//TODO: Remove after completing App css/html
+gsap.set(app, {
+  opacity: 1,
+  top: "60%",
+  left: "50%",
+  xPercent: -50,
+  yPercent: -50,
+  width: "65vw",
+  height: "75vh",
+});
 
 isScreenVisible = false;
 
@@ -42,12 +52,12 @@ function positionStar() {
   const rect = frigo.getBoundingClientRect();
   const x = rect.left + rect.width * 0.75;
   const y = rect.top + rect.height * 0.285;
-  star_logo.style.display = "block";
+  starLogo.style.display = "block";
   screenInteract.style.display = "block";
 
   // Star
-  star_logo.style.left = `${x}px`;
-  star_logo.style.top = `${y}px`;
+  starLogo.style.left = `${x}px`;
+  starLogo.style.top = `${y}px`;
 
   //Interactable Screen Position and Width/Height
   const screenX = rect.left + rect.width * 0.6;
@@ -64,39 +74,20 @@ function positionStar() {
 window.addEventListener("resize", positionStar);
 window.addEventListener("scroll", positionStar);
 
-// screenInteract.addEventListener("click", showPolarisMenu);
-
-// function showPolarisMenu() {
-//   isScreenVisible = true;
-
-//   screen.style.display = "flex";
-//   star_logo.style.display = "none";
-//   screenInteract.style.display = "none";
-// }
-
 const fridge = document.querySelector(".frigo-container");
 
-star_logo.addEventListener("click", () => {
+starLogo.addEventListener("click", () => {
   isScreenVisible = true;
   const timeline = gsap.timeline();
-  console.log(star_logo);
+  console.log(starLogo);
   timeline
-    .to(star_logo, {
+    .to(starLogo, {
       scale: 3,
       y: -150,
       duration: 1.2,
       opacity: 0,
-      ease: "power2.inOut",
+      ease: "power2.in",
     })
-    .to(
-      fridge,
-      {
-        opacity: 0.2,
-        filter: "blur(10px)",
-        duration: 1,
-      },
-      "-=1"
-    )
     .to(
       app,
       {
@@ -110,6 +101,15 @@ star_logo.addEventListener("click", () => {
         duration: 1.4,
         ease: "power3.inOut",
       },
-      "-=0.8"
+      "-=0.3"
+    )
+    .to(
+      fridge,
+      {
+        opacity: 0.2,
+        filter: "blur(10px)",
+        duration: 1,
+      },
+      "-=0.3"
     );
 });
