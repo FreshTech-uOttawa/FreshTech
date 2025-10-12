@@ -1,4 +1,4 @@
-const screen = document.querySelector(".screen");
+const app = document.querySelector(".screen");
 const beginBtn = document.querySelector(".begin-simulation-btn");
 const frigoContainer = document.querySelector(".frigo-container");
 const frigo = document.querySelector(".frigo");
@@ -17,7 +17,6 @@ async function beginSimulation() {
 
   setTimeout(() => {
     positionStar();
-    star_logo.classList.add("animate_star");
   }, 1600 + 900 + 100);
 
   //TODO: Fade out button
@@ -29,6 +28,14 @@ async function beginSimulation() {
  */
 function positionStar() {
   if (isScreenVisible) {
+    gsap.set(app, {
+      top: "60%",
+      left: "50%",
+      xPercent: -50,
+      yPercent: -50,
+      width: "60vw",
+      height: "75vh",
+    });
     return;
   }
 
@@ -57,15 +64,52 @@ function positionStar() {
 window.addEventListener("resize", positionStar);
 window.addEventListener("scroll", positionStar);
 
-screenInteract.addEventListener("click", showPolarisMenu);
+// screenInteract.addEventListener("click", showPolarisMenu);
 
-function showPolarisMenu() {
-  //TODO:
-  // Make the screen big, and hide everything else (except title/menu?)
-  //Placeholder code for now
+// function showPolarisMenu() {
+//   isScreenVisible = true;
+
+//   screen.style.display = "flex";
+//   star_logo.style.display = "none";
+//   screenInteract.style.display = "none";
+// }
+
+const fridge = document.querySelector(".frigo-container");
+
+star_logo.addEventListener("click", () => {
   isScreenVisible = true;
-
-  screen.style.display = "flex";
-  star_logo.style.display = "none";
-  screenInteract.style.display = "none";
-}
+  const timeline = gsap.timeline();
+  console.log(star_logo);
+  timeline
+    .to(star_logo, {
+      scale: 3,
+      y: -150,
+      duration: 1.2,
+      opacity: 0,
+      ease: "power2.inOut",
+    })
+    .to(
+      fridge,
+      {
+        opacity: 0.2,
+        filter: "blur(10px)",
+        duration: 1,
+      },
+      "-=1"
+    )
+    .to(
+      app,
+      {
+        opacity: 1,
+        top: "60%",
+        left: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        width: "65vw",
+        height: "75vh",
+        duration: 1.4,
+        ease: "power3.inOut",
+      },
+      "-=0.8"
+    );
+});
