@@ -1,18 +1,24 @@
-const screen = document.querySelector(".screen");
+const app = document.querySelector(".screen");
 const beginBtn = document.querySelector(".begin-simulation-btn");
 const frigoContainer = document.querySelector(".frigo-container");
 const frigo = document.querySelector(".frigo");
-const star_logo = document.querySelector(".star_logo");
+const starLogo = document.querySelector(".star_logo");
 const screenInteract = document.querySelector(".interactable");
+//TODO: Remove after completing App css/html
+gsap.set(app, {
+  opacity: 0,
+  top: "60%",
+  left: "50%",
+  xPercent: -50,
+  yPercent: -50,
+  width: "65vw",
+  height: "75vh",
+  display: "none",
+});
+
+isScreenVisible = false;
 
 async function beginSimulation() {
-  //TODO: Probably make it quick and subtle
-  // It should take away the focus from the background and the user shouldnt directly noticed the background fade
-  // Could see the fridge all the time and just zoom on start
-  // Could make the stars go to the left and make the fridge appear from the right
-  // Could make the stars go forward and grow the fridge from the middle? (It should be quick)
-  // Could make a really bright star in the middle and it will look like we are going to that star when going forward
-  // and the star will be the fridge? ** Seems good, but hard
   beginBtn.style.display = "none";
 
   setTimeout(() => {
@@ -22,22 +28,91 @@ async function beginSimulation() {
 
   setTimeout(() => {
     positionStar();
-    star_logo.classList.add("animate_star");
   }, 1600 + 900 + 100);
 
   //TODO: Fade out button
 }
 
+/**
+ * Function which calculates where on the screen the interactable screen should be
+ * This way, the interactable screen will appear exactly on the image regardless of the screen size
+ */
 function positionStar() {
+  if (isScreenVisible) {
+    gsap.set(app, {
+      top: "60%",
+      left: "50%",
+      xPercent: -50,
+      yPercent: -50,
+      width: "60vw",
+      height: "75vh",
+    });
+    return;
+  }
+
   const rect = frigo.getBoundingClientRect();
   const x = rect.left + rect.width * 0.75;
   const y = rect.top + rect.height * 0.285;
+  starLogo.style.display = "block";
+  screenInteract.style.display = "block";
 
-  star_logo.style.left = `${x}px`;
-  star_logo.style.top = `${y}px`;
-  screenInteract.style.left = `${x}px`;
-  screenInteract.style.top = `${y}px`;
+  // Star
+  starLogo.style.left = `${x}px`;
+  starLogo.style.top = `${y}px`;
+
+  //Interactable Screen Position and Width/Height
+  const screenX = rect.left + rect.width * 0.6;
+  const screenY = rect.top + rect.height * 0.25;
+  const screenWidth = rect.width * 0.333;
+  const screenHeight = rect.height * 0.31;
+
+  screenInteract.style.left = `${screenX}px`;
+  screenInteract.style.top = `${screenY - screenHeight / 3}px`;
+  screenInteract.style.width = `${screenWidth}px`;
+  screenInteract.style.height = `${screenHeight}px`;
 }
 
 window.addEventListener("resize", positionStar);
 window.addEventListener("scroll", positionStar);
+
+const fridge = document.querySelector(".frigo-container");
+
+starLogo.addEventListener("click", () => {
+  isScreenVisible = true;
+  const timeline = gsap.timeline();
+
+  gsap.set(".screen", { display: "flex" });
+
+  timeline
+    .to(starLogo, {
+      scale: 3,
+      y: -150,
+      duration: 1.2,
+      opacity: 0,
+      ease: "power2.in",
+    })
+    .to(
+      fridge,
+      {
+        opacity: 0.2,
+        filter: "blur(10px)",
+        duration: 1,
+      },
+      "-=1"
+    )
+    .to(
+      app,
+      {
+        opacity: 1,
+        top: "60%",
+        left: "50%",
+        xPercent: -50,
+        yPercent: -50,
+        width: "65vw",
+        height: "75vh",
+        duration: 1.4,
+        ease: "power3.inOut",
+      },
+      "-=0.8"
+    );
+});
