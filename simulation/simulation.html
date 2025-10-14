@@ -196,9 +196,42 @@
           </div>
         </div>
         <div>
-          <h3>Nutrition Missing Today</h3>
-          <div>One left div</div>
-          <div>One Right div</div>
+          <h3>Today's Nutrition Gaps</h3>
+          <div style="display: grid; grid-template-columns: auto auto">
+            <div class="nutrition-card">
+              <div class="nutrition-header">
+                <p class="nutrition-subtitle">
+                  Based on daily recommended intake
+                </p>
+              </div>
+
+              <div class="nutrient-list">
+                <div class="nutrient-item">
+                  <span class="nutrient-name">Iron</span>
+                  <span class="nutrient-status low">Low</span>
+                </div>
+                <div class="nutrient-item">
+                  <span class="nutrient-name">Vitamin D</span>
+                  <span class="nutrient-status low">Low</span>
+                </div>
+                <div class="nutrient-item">
+                  <span class="nutrient-name">Calcium</span>
+                  <span class="nutrient-status medium">Slightly Low</span>
+                </div>
+                <div class="nutrient-item">
+                  <span class="nutrient-name">Fiber</span>
+                  <span class="nutrient-status good">Good</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="images/image.png"
+              alt="A Pie Chart in donut shape representing the recommandation nutrition percentage for the day"
+              width="100%"
+              height="100%"
+              style="object-fit: contain; max-width: 300px; margin: auto"
+            />
+          </div>
         </div>
       </div>
 
