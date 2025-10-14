@@ -6,13 +6,14 @@ const starLogo = document.querySelector(".star_logo");
 const screenInteract = document.querySelector(".interactable");
 //TODO: Remove after completing App css/html
 gsap.set(app, {
-  opacity: 1,
+  opacity: 0,
   top: "60%",
   left: "50%",
   xPercent: -50,
   yPercent: -50,
   width: "65vw",
   height: "75vh",
+  display: "none",
 });
 
 isScreenVisible = false;
@@ -79,7 +80,9 @@ const fridge = document.querySelector(".frigo-container");
 starLogo.addEventListener("click", () => {
   isScreenVisible = true;
   const timeline = gsap.timeline();
-  console.log(starLogo);
+
+  gsap.set(".screen", { display: "flex" });
+
   timeline
     .to(starLogo, {
       scale: 3,
@@ -88,6 +91,15 @@ starLogo.addEventListener("click", () => {
       opacity: 0,
       ease: "power2.in",
     })
+    .to(
+      fridge,
+      {
+        opacity: 0.2,
+        filter: "blur(10px)",
+        duration: 1,
+      },
+      "-=1"
+    )
     .to(
       app,
       {
@@ -101,15 +113,6 @@ starLogo.addEventListener("click", () => {
         duration: 1.4,
         ease: "power3.inOut",
       },
-      "-=0.3"
-    )
-    .to(
-      fridge,
-      {
-        opacity: 0.2,
-        filter: "blur(10px)",
-        duration: 1,
-      },
-      "-=0.3"
+      "-=0.8"
     );
 });

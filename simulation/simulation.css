@@ -157,11 +157,11 @@ button:hover {
 
 .screen {
   /* FIXME: This is just for testing, to remove */
-  display: flex;
+  /* display: flex; */
   /* top: 100px;
   position: relative; */
 
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   color: #ebebeb;
   z-index: 2;
