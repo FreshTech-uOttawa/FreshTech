@@ -161,6 +161,7 @@ button:hover {
   /* top: 100px;
   position: relative; */
 
+  display: none;
   opacity: 0;
   position: absolute;
   color: #ebebeb;
@@ -177,10 +178,8 @@ button:hover {
     #04192d 0.1%,
     #05131f 100.2%
   );
-
-  position: absolute;
   top: 25%;
-  left: 65%;
+  left: 30%;
 }
 
 .top-bar {
