@@ -1,22 +1,13 @@
+import { strechCamera } from "./star_background.js";
+
 const app = document.querySelector(".screen");
 const beginBtn = document.querySelector(".begin-simulation-btn");
 const frigoContainer = document.querySelector(".frigo-container");
 const frigo = document.querySelector(".frigo");
-const starLogo = document.querySelector(".star_logo");
-const screenInteract = document.querySelector(".interactable");
-//TODO: Remove after completing App css/html
-gsap.set(app, {
-  opacity: 0,
-  top: "60%",
-  left: "50%",
-  xPercent: -50,
-  yPercent: -50,
-  width: "65vw",
-  height: "75vh",
-  display: "none",
-});
-
-isScreenVisible = false;
+const screenInteract = document.getElementById("starContainer");
+const starLogo = document.getElementById("starCanvas");
+const fridge = document.querySelector(".frigo-container");
+let isScreenVisible = false;
 
 async function beginSimulation() {
   beginBtn.style.display = "none";
@@ -29,8 +20,6 @@ async function beginSimulation() {
   setTimeout(() => {
     positionStar();
   }, 1600 + 900 + 100);
-
-  //TODO: Fade out button
 }
 
 /**
@@ -51,14 +40,7 @@ function positionStar() {
   }
 
   const rect = frigo.getBoundingClientRect();
-  const x = rect.left + rect.width * 0.75;
-  const y = rect.top + rect.height * 0.285;
-  starLogo.style.display = "block";
-  screenInteract.style.display = "block";
-
-  // Star
-  starLogo.style.left = `${x}px`;
-  starLogo.style.top = `${y}px`;
+  screenInteract.style.display = "flex";
 
   //Interactable Screen Position and Width/Height
   const screenX = rect.left + rect.width * 0.6;
@@ -70,19 +52,43 @@ function positionStar() {
   screenInteract.style.top = `${screenY - screenHeight / 3}px`;
   screenInteract.style.width = `${screenWidth}px`;
   screenInteract.style.height = `${screenHeight}px`;
+
+  starLogo.style.left = `${screenX}px`;
+  starLogo.style.top = `${screenY - screenHeight / 3}px`;
+  starLogo.style.width = `${screenWidth / 1.3}px`;
+  starLogo.style.height = `${screenHeight / 1.3}px`;
+
+  gsap.to("#starContainer", {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power3.inOut",
+  });
+  gsap.from("#starContainer", {
+    duration: 2.5,
+    y: 270,
+    ease: "circ.out",
+  });
+  strechCamera();
 }
 
 window.addEventListener("resize", positionStar);
 window.addEventListener("scroll", positionStar);
+document.getElementById("beginSimulation").addEventListener("click", () => {
+  beginSimulation();
+});
+screenInteract.addEventListener("click", () => {
+  animateScreen();
+});
 
-const fridge = document.querySelector(".frigo-container");
-
-starLogo.addEventListener("click", () => {
+/**
+ * Function which animates the screen to appear.
+ * From the star logo disappearing, the fridge disappearing and the screen appearing
+ * and adjusting the size according to the screen size
+ */
+function animateScreen() {
   isScreenVisible = true;
   const timeline = gsap.timeline();
-
   gsap.set(".screen", { display: "flex" });
-
   timeline
     .to(starLogo, {
       scale: 3,
@@ -115,4 +121,5 @@ starLogo.addEventListener("click", () => {
       },
       "-=0.8"
     );
-});
+  screenInteract.style = "z-index: 0";
+}

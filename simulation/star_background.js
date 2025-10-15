@@ -9,7 +9,9 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.getElementById("bgCanvas"),
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -177,7 +179,6 @@ async function beginSimulation() {
     ease: "power2.Out",
   });
 
-  // document.querySelector("canvas").classList.add("dim-background");
   setTimeout(() => {
     isAnimating = false;
   }),
@@ -192,6 +193,93 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-document
-  .querySelector(".begin-simulation-btn")
-  .addEventListener("click", beginSimulation);
+document.getElementById("beginSimulation").addEventListener("click", () => {
+  beginSimulation();
+});
+
+/* ########## */
+/* Star Logo  */
+/* ########## */
+
+// Setup general Scene and camera
+const logoScene = new THREE.Scene();
+const logoCamera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+logoCamera.position.set(2, 2, 5);
+
+const logoRenderer = new THREE.WebGLRenderer({
+  canvas: document.getElementById("starCanvas"),
+  alpha: true,
+  antialias: true,
+});
+logoRenderer.setSize(200, 200);
+logoRenderer.setClearColor(0x000000, 0);
+
+// Lighting
+logoScene.add(new THREE.AmbientLight(0xffffff, 1.5));
+const dirLight = new THREE.DirectionalLight(0xffffff, 10);
+dirLight.position.set(2, 2, 3);
+logoScene.add(dirLight);
+
+// Load FBX model
+const textureLoader = new THREE.TextureLoader();
+const texture = textureLoader.load("images/4PointStarTexture.png");
+texture.anisotropy = logoRenderer.capabilities.getMaxAnisotropy();
+const loader = new THREE.FBXLoader();
+let logoModel = null;
+
+// "4 Point Star" by Yessica Servin Dominguez, used under CC Attribution 4.0. https://sketchfab.com/3d-models/4-point-star-c1481a0c1d4540818b6bcfd83dd5034b)
+loader.load("images/4PointStar.fbx", (object) => {
+  object.traverse((child) => {
+    if (child.isMesh) {
+      child.material.map = texture;
+      child.material.needsUpdate = true;
+    }
+  });
+  object.scale.set(1, 1, 1);
+  object.rotation.set(1.7, 0, 0);
+
+  logoScene.add(object);
+  logoModel = object;
+
+  // Center Star
+  const box = new THREE.Box3().setFromObject(object);
+  const size = box.getSize(new THREE.Vector3()).length();
+  logoCamera.position.set(0, 0, size * 1.5);
+  logoCamera.lookAt(0, 0, 0);
+});
+
+gsap.to(dirLight, {
+  intensity: 3,
+  duration: 1.5,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut",
+});
+
+function animate() {
+  requestAnimationFrame(animate);
+  if (logoModel) {
+    logoModel.rotation.z += 0.0065;
+  }
+
+  logoRenderer.render(logoScene, logoCamera);
+}
+animate();
+
+/**
+ * Function which updates the size of the star after its position is changed to un-strech the star
+ */
+export function strechCamera() {
+  const rectCanvas = document
+    .getElementById("starCanvas")
+    .getBoundingClientRect();
+  logoRenderer.setSize(rectCanvas.width, rectCanvas.height, false);
+  logoRenderer.setPixelRatio(rectCanvas.devicePixelRatio);
+  logoCamera.aspect = rectCanvas.width / rectCanvas.height;
+  logoCamera.updateProjectionMatrix();
+}
