@@ -7,6 +7,8 @@ const frigo = document.querySelector(".frigo");
 const screenInteract = document.getElementById("starContainer");
 const starLogo = document.getElementById("starCanvas");
 const fridge = document.querySelector(".frigo-container");
+const stopSimulationBtn = document.getElementById("stopSimulation");
+
 let isScreenVisible = false;
 
 async function beginSimulation() {
@@ -89,6 +91,9 @@ document.getElementById("beginSimulation").addEventListener("click", () => {
 screenInteract.addEventListener("click", () => {
   animateScreen();
 });
+stopSimulationBtn.addEventListener("click", () => {
+  closeScreen();
+});
 
 /**
  * Function which animates the screen to appear.
@@ -99,6 +104,7 @@ function animateScreen() {
   isScreenVisible = true;
   const timeline = gsap.timeline();
   gsap.set(".screen", { display: "flex" });
+  gsap.set(stopSimulationBtn, { display: "flex" });
   timeline
     .to(screenInteract, {
       y: -120,
@@ -108,8 +114,7 @@ function animateScreen() {
       immediateRender: false,
     })
     .to(fridge, {
-      opacity: 0.2,
-      filter: "blur(10px)",
+      opacity: 0.1,
       duration: 1,
     })
     .to(
@@ -126,11 +131,20 @@ function animateScreen() {
         ease: "power3.inOut",
       },
       "-=0.8"
+    )
+    .to(
+      stopSimulationBtn,
+      {
+        opacity: 1,
+      },
+      "-=0.8"
     );
-  console.log(window.innerWidth * 0.6 > 1500);
-  console.log(window.innerWidth * 0.6);
 }
 
+/**
+ * Get window size based on the screen size
+ * @returns Width and height
+ */
 function getWindowSize() {
   const viewWidth = window.innerWidth;
   const viewHeight = window.innerHeight;
@@ -147,4 +161,52 @@ function getWindowSize() {
   appHeight = Math.max(minHeight, Math.min(appHeight, maxHeight));
 
   return [appWidth, appHeight];
+}
+
+/**
+ * Function which hides the screens and goes back to the fridge
+ */
+function closeScreen() {
+  const timeline = gsap.timeline();
+  isScreenVisible = false;
+  timeline
+    .to(app, {
+      opacity: 0,
+      top: "25%",
+      left: "30%",
+      xPercent: 50,
+      yPercent: 50,
+      duration: 1,
+      ease: "power3.inOut",
+      width: getWindowSize()[0] / 2,
+      height: getWindowSize()[1] / 2,
+    })
+    .to(
+      fridge,
+      {
+        opacity: 1,
+        duration: 1,
+      },
+      "-=1"
+    )
+    .fromTo(
+      screenInteract,
+      { y: 120, opacity: 0 },
+      {
+        y: 0,
+        duration: 1.5,
+        opacity: 1,
+        ease: "circ.out",
+      }
+    )
+    .to(
+      stopSimulationBtn,
+      {
+        opacity: 0,
+      },
+      "-=1.5"
+    )
+    .then(() => {
+      stopSimulationBtn.style.display = "none";
+    });
 }

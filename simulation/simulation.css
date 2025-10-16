@@ -42,7 +42,7 @@ html {
 /** Button Classes  **/
 /** ############### **/
 
-button {
+.button {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
@@ -52,9 +52,27 @@ button {
   font-size: large;
 }
 
-button:hover {
+.button:hover {
   background-color: #3c77a7;
   cursor: pointer;
+}
+
+.close-btn {
+  border-radius: 10px;
+  border: none;
+  position: fixed;
+  top: max(5rem, env(safe-area-inset-top));
+  right: max(3rem, env(safe-area-inset-right));
+  z-index: 5;
+  display: none;
+  opacity: 0;
+  padding: 6px;
+  background-color: #d6d6d6;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  background-color: #ffff;
 }
 
 .screen-btn {
@@ -578,6 +596,7 @@ button:hover {
   z-index: 3;
   cursor: pointer;
   opacity: 0;
+  transform: translate(0, 0);
 }
 
 #starCanvas {
