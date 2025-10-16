@@ -189,6 +189,17 @@ function closeScreen() {
       },
       "-=1"
     )
+    .to(
+      stopSimulationBtn,
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      "-=1.5"
+    )
+    .then(() => {
+      stopSimulationBtn.style.display = "none";
+    })
     .fromTo(
       screenInteract,
       { y: 120, opacity: 0 },
@@ -198,15 +209,5 @@ function closeScreen() {
         opacity: 1,
         ease: "circ.out",
       }
-    )
-    .to(
-      stopSimulationBtn,
-      {
-        opacity: 0,
-      },
-      "-=1.5"
-    )
-    .then(() => {
-      stopSimulationBtn.style.display = "none";
-    });
+    );
 }
