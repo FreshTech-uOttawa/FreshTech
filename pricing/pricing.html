@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaris - Pricing</title>
+    <link  rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+    <header>
+        <!-- add company logo when we have it-->
+        <img id="company-logo" src="images/PLACEHOLDER" alt="FreshTech company logo"/>
+
+        <!-- Nav bar to be created in a separate file so that everyone can use and link here-->
+        <!-- Shopping cart page needed-->
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="team.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="simulation.html">Simulation</a></li>
+                <li>
+                    <a href="shopping-cart.html>">
+                        <img src="images/shopping-cart.svg" alt="Shopping Cart Icon" width="30" height="30"/>
+                    </a>
+                </li>
+        </nav>
+        
+        <form action="/search" method="get" id="search-form" role="search">
+            <label for="search-query" class="visually-hidden">Search the site</label> <!-- visually hidden is to style later in css (off the map)-->
+            <input type="search" placeholder="Search" class="search-input" name="search-query"/>
+        </form>
+
+    </header>
+
+    
+
+    <main>
+        <section id="pricing-introduction">
+            <h1 class="page-title">See Our Pricing Plans</h1>
+            <!-- Insert arrow button that slides user down to pricing tiers -->
+            <button class="arrow-button">"Arrow"</button>
+        </section>
+
+        <section id="pricing-tiers">
+            <h2>Pricing Tiers</h2>
+       
+            <div class="basic-tier">
+                <h3>Basic</h3>
+                <p class="starting-price">starting at ---$</p>
+                <p class="monthly-price">+ ---$/month</p>
+                <ul>
+                    <li>Basic Feature #1</li>
+                    <li>Basic Feature #2</li>
+                    <li>Basic Feature #3</li>
+                    <li>...</li>
+                </ul>
+                <button class="select-plan-button">Select Plan</button>
+                <!-- Figure out where this button leads (js)-->
+            </div>
+
+            <div class="pro-tier">
+                <h3>Pro</h3>
+                <p class="starting-price">starting at ---$</p>
+                <p class="monthly-price">+ ---$/month</p>
+                <ul>
+                    <li>Pro Feature #1</li>
+                    <li>Pro Feature #2</li>
+                    <li>Pro Feature #3</li>
+                    <li>...</li>
+                </ul>
+                <button class="select-plan-button">Select Plan</button>
+                <!-- Figure out where this button leads (js)-->     
+            </div>
+
+            <div class="premium-tier">
+                <h3>Premium</h3>
+                <p class="starting-price">starting at ---$</p>
+                <p class="monthly-price">+ ---$/month</p>
+                <ul>
+                    <li>Premium Feature #1</li>
+                    <li>Premium Feature #2</li>
+                    <li>Premium Feature #3</li>
+                    <li>...</li>
+                </ul>
+                <button class="select-plan-button">Select Plan</button>
+                <!-- Figure out where this button leads (js)-->     
+            </div>
+        </section>
+
+        <section id="tier-comparisons">
+            <h2>Compare Our Plans</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Basic</th>
+                        <th>Pro</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feature 1</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 2</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 3</td>
+                        <td>"X"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 4</td>
+                        <td>"X"</td>
+                        <td>"X"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <!-- Add proper features when the time comes -->
+                    <!-- Add proper checkmarks, x's-->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="plan-recommendation">
+            <h2>Need Help Choosing a Plan?</h2>
+            <h4>Take the time to answer a few questions to find the best plan for you.</h4>
+            <input type="text" placeholder="Question 1..." class="question" name="recommendation-question"/>
+            <input type="text" placeholder="Question 2..." class="question" name="recommendation-question"/>
+            <input type="text" placeholder="Question 3..." class="question" name="recommendation-question"/>
+            <!-- Figure out how to do the question survey -->
+        </section>
+    </main>
+
+    <!-- task someone with the footer-->
+    <footer>
+        <div class="footer-placeholder">
+            <div>Place Holder Footer</div>
+        </div>
+    </footer>
+
+    
+</body>
+
+
+</html>
