@@ -19,7 +19,11 @@ async function loadHTML(targetId, filePath) {
 
 /* Loading the navigation when the page loaded */
 document.addEventListener("DOMContentLoaded", () => {
-  loadHTML("nav-container", "nav.html");
+  if (window.location.hostname.endsWith("FreshTech/")) {
+    loadHTML("nav-container", "nav.html");
+  } else {
+    loadHTML("nav-container", "../nav.html");
+  }
 
   const path = window.location.pathname;
 
