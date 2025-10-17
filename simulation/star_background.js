@@ -15,6 +15,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+let isSimulationStarted = false;
 let isAnimating = true;
 const starPhases = [];
 const starSpeeds = [];
@@ -130,10 +131,14 @@ function setupCameraMovement() {
     camera.rotation.x = currentRotationX;
     camera.rotation.y = -currentRotationY;
 
+    if (!isSimulationStarted) {
+      camera.rotation.z += Math.random() * 0.0001;
+      camera.rotation.x += Math.random() * 0.0001;
+      camera.rotation.y += Math.random() * 0.0001;
+    }
+
     frameCount++;
-    // if (frameCount % 10 === 0) {
     changeOpacity(scene.children.find((obj) => obj.type === "Points"));
-    // }
     renderer.render(scene, camera);
   }
 
@@ -162,6 +167,7 @@ function changeOpacity(stars) {
  * After the animation is done, it stops all animations and dims the background.
  */
 async function beginSimulation() {
+  isSimulationStarted = true;
   await gsap.to(camera.position, {
     x: 0,
     y: 0,
