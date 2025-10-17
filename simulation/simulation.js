@@ -211,3 +211,25 @@ function closeScreen() {
       stopSimulationBtn.style.display = "none";
     });
 }
+
+/**
+ * Function which updates the date and the time
+ */
+function updateDateTime() {
+  const now = new Date();
+
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const year = now.getFullYear();
+  const dateStr = `${month}/${day}/${year}`;
+
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const timeStr = `${hours}:${minutes}`;
+
+  document.getElementById("date").textContent = dateStr;
+  document.getElementById("time").textContent = timeStr;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();

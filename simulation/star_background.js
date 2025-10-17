@@ -132,9 +132,9 @@ function setupCameraMovement() {
     camera.rotation.y = -currentRotationY;
 
     if (!isSimulationStarted) {
-      camera.rotation.z += Math.random() * 0.0001;
-      camera.rotation.x += Math.random() * 0.0001;
-      camera.rotation.y += Math.random() * 0.0001;
+      camera.rotation.z += Math.random() * 0.0003;
+      camera.rotation.x += Math.random() * 0.0003;
+      camera.rotation.y += Math.random() * 0.0003;
     }
 
     frameCount++;
