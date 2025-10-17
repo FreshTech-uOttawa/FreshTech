@@ -20,4 +20,10 @@ async function loadHTML(targetId, filePath) {
 /* Loading the navigation when the page loaded */
 document.addEventListener("DOMContentLoaded", () => {
   loadHTML("nav-container", "../nav.html");
+
+  const path = window.location.pathname;
+
+  if (path.endsWith("/") || path.endsWith("/index.html")) {
+    loadHTML("accueil-container", "./Accueil/PageAccueil.html");
+  }
 });
