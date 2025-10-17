@@ -34,13 +34,16 @@
             <input type="search" placeholder="Search" class="search-input" name="search-query"/>
         </form>
 
-        <h1 id="page-title">Pricing</h1>
     </header>
 
     
 
     <main>
-        <section id="pricing-introduction"></section>
+        <section id="pricing-introduction">
+            <h1 class="page-title">See Our Pricing Plans</h1>
+            <!-- Insert arrow button that slides user down to pricing tiers -->
+            <button class="arrow-button">"Arrow"</button>
+        </section>
 
         <section id="pricing-tiers">
             <h2>Pricing Tiers</h2>
@@ -88,7 +91,56 @@
             </div>
         </section>
 
-        <section id="plan-recommendation"></section>
+        <section id="tier-comparisons">
+            <h2>Compare Our Plans</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th>Basic</th>
+                        <th>Pro</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feature 1</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 2</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 3</td>
+                        <td>"X"</td>
+                        <td>"Check"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <tr>
+                        <td>Feature 4</td>
+                        <td>"X"</td>
+                        <td>"X"</td>
+                        <td>"Check"</td>
+                    </tr>
+                    <!-- Add proper features when the time comes -->
+                    <!-- Add proper checkmarks, x's-->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="plan-recommendation">
+            <h2>Need Help Choosing a Plan?</h2>
+            <h4>Take the time to answer a few questions to find the best plan for you.</h4>
+            <input type="text" placeholder="Question 1..." class="question" name="recommendation-question"/>
+            <input type="text" placeholder="Question 2..." class="question" name="recommendation-question"/>
+            <input type="text" placeholder="Question 3..." class="question" name="recommendation-question"/>
+            <!-- Figure out how to do the question survey -->
+        </section>
     </main>
 
     <!-- task someone with the footer-->
