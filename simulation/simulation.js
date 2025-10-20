@@ -107,7 +107,7 @@ function animateScreen() {
   gsap.set(stopSimulationBtn, { display: "flex" });
   timeline
     .to(screenInteract, {
-      y: -120,
+      y: -100,
       duration: 1.5,
       opacity: 0,
       ease: "circ.in",
@@ -199,8 +199,9 @@ function closeScreen() {
     )
     .fromTo(
       screenInteract,
-      { y: 120, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
+        scale: 1,
         y: 0,
         duration: 1.5,
         opacity: 1,

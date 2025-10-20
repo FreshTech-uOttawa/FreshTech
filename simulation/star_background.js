@@ -207,6 +207,8 @@ document.getElementById("beginSimulation").addEventListener("click", () => {
 /* Star Logo  */
 /* ########## */
 
+const starCanvas = document.getElementById("starCanvas");
+
 // Setup general Scene and camera
 const logoScene = new THREE.Scene();
 const logoCamera = new THREE.PerspectiveCamera(
@@ -218,7 +220,7 @@ const logoCamera = new THREE.PerspectiveCamera(
 logoCamera.position.set(2, 2, 5);
 
 const logoRenderer = new THREE.WebGLRenderer({
-  canvas: document.getElementById("starCanvas"),
+  canvas: starCanvas,
   alpha: true,
   antialias: true,
 });
@@ -281,11 +283,31 @@ animate();
  * Function which updates the size of the star after its position is changed to un-strech the star
  */
 export function strechCamera() {
-  const rectCanvas = document
-    .getElementById("starCanvas")
-    .getBoundingClientRect();
+  const rectCanvas = starCanvas.getBoundingClientRect();
   logoRenderer.setSize(rectCanvas.width, rectCanvas.height, false);
   logoRenderer.setPixelRatio(rectCanvas.devicePixelRatio);
   logoCamera.aspect = rectCanvas.width / rectCanvas.height;
   logoCamera.updateProjectionMatrix();
 }
+
+// Scale star when we hover
+const starContainer = document.getElementById("starContainer");
+starContainer.addEventListener("mouseover", () => {
+  gsap
+    .to(starCanvas, {
+      scale: 1.35,
+    })
+    .then(() => {
+      strechCamera();
+    });
+});
+
+starContainer.addEventListener("mouseout", () => {
+  gsap
+    .to(starCanvas, {
+      scale: 1,
+    })
+    .then(() => {
+      strechCamera();
+    });
+});
