@@ -24,20 +24,6 @@ html {
   background-color: black;
 }
 
-.placeholderNav {
-  background-color: #04192d;
-  height: 50px;
-  width: 100%;
-  top: 0;
-  color: white;
-  z-index: 3;
-  position: relative;
-}
-
-.m-l {
-  margin-left: 10px;
-}
-
 /** ############### **/
 /** Button Classes  **/
 /** ############### **/
@@ -121,11 +107,10 @@ html {
 /** ############### **/
 .title {
   margin-top: 1vh;
-  font-size: 5vw; /*TODO: Fix the font size (it's way too small on mobile)*/
+  font-size: xxx-large;
   text-align: center;
   color: white;
   text-shadow: 0 0 10px #fff, 0 0 25px #00c8ff;
-  /* animation: fade-in ease-in-out 3000ms;  */
   z-index: 2;
   position: relative;
   margin-bottom: 0;
@@ -174,11 +159,6 @@ html {
 /** ############### **/
 
 .screen {
-  /* FIXME: This is just for testing, to remove */
-  /* display: flex; */
-  /* top: 100px;
-  position: relative; */
-
   display: none;
   opacity: 0;
   position: absolute;
@@ -262,7 +242,6 @@ html {
 /** Screen Content Classes   **/
 /** ####################### **/
 
-/*TODO: Adjust this */
 .content {
   flex-grow: 1;
   padding: 3px 0px 3px 20px;
@@ -292,34 +271,6 @@ html {
 .card h1 {
   margin: 0px;
   font-size: 150%;
-}
-
-/* TODO: Find a good with / height that can be adapted based screen size */
-.item-image {
-  height: 50px;
-  width: 50px;
-  margin-right: 10px;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 100%;
-}
-
-.item-container {
-  padding: 15px;
-}
-
-.item {
-  padding: 2px;
-  margin: 6px 0;
-}
-
-.item:hover {
-  background-color: #3c77a7;
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 /** ######################## **/
