@@ -118,6 +118,14 @@ function animateScreen() {
       duration: 1,
     })
     .to(
+      ".title",
+      {
+        opacity: 0.1,
+        duration: 1,
+      },
+      "-=1"
+    )
+    .to(
       app,
       {
         opacity: 1,
@@ -166,10 +174,10 @@ function getWindowSize() {
 /**
  * Function which hides the screens and goes back to the fridge
  */
-function closeScreen() {
+async function closeScreen() {
   const timeline = gsap.timeline();
   isScreenVisible = false;
-  timeline
+  await timeline
     .to(app, {
       opacity: 0,
       top: "25%",
@@ -181,6 +189,14 @@ function closeScreen() {
       width: getWindowSize()[0] / 2,
       height: getWindowSize()[1] / 2,
     })
+    .to(
+      ".title",
+      {
+        opacity: 1,
+        duration: 1,
+      },
+      "-=1"
+    )
     .to(
       fridge,
       {
@@ -197,20 +213,21 @@ function closeScreen() {
       },
       "-=1.5"
     )
-    .fromTo(
-      screenInteract,
-      { y: 100, opacity: 0 },
-      {
-        scale: 1,
-        y: 0,
-        duration: 1.5,
-        opacity: 1,
-        ease: "circ.out",
-      }
-    )
     .then(() => {
       stopSimulationBtn.style.display = "none";
     });
+
+  gsap.fromTo(
+    screenInteract,
+    { y: 100, opacity: 0 },
+    {
+      scale: 1,
+      y: 0,
+      duration: 1.5,
+      opacity: 1,
+      ease: "circ.out",
+    }
+  );
 }
 
 /**
