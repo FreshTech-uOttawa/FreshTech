@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+:root {
+  font-size: 15px;
+  font-family: roboto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "TikTok Sans", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
