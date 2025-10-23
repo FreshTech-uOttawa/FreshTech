@@ -13,13 +13,13 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
 
 /* Home Link Styles */
 nav .home {
-  font-family: 'Parkinsans', sans-serif;
+  font-family: "Parkinsans", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: #eee;
@@ -36,7 +36,7 @@ nav .home {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .nav-links a {
@@ -48,7 +48,7 @@ nav .home {
 }
 
 .nav-links a:hover {
-  color: #A6C7F9;
+  color: #a6c7f9;
   transform: scale(1.05);
 }
 
@@ -61,15 +61,14 @@ nav .home {
   align-items: center;
 }
 
-.search-wrapper{
-
+.search-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-}  
+}
 
 .search-input {
-  padding: 0.3em 1.8em 0.3em 0.8em; 
+  padding: 0.3em 1.8em 0.3em 0.8em;
   border: 1px solid #555;
   border-radius: 20px;
   background-color: #222;
@@ -115,15 +114,15 @@ input[type="search"]::-webkit-search-cancel-button {
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-variation-settings: 'FILL' 0;
+  font-variation-settings: "FILL" 0;
   color: #eee;
   font-size: 1.4em;
   transition: font-variation-settings 0.2s ease, color 0.2s ease;
 }
 
 .shopping-cart a:hover {
-  font-variation-settings: 'FILL' 1;
-  color: #A6C7F9;
+  font-variation-settings: "FILL" 1;
+  color: #a6c7f9;
 }
 
 .visually-hidden {
