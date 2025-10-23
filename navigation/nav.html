@@ -8,20 +8,36 @@
   <nav>
     <a class="home" href="../">Polaris</a>
     <!-- Add/Replace with logo-->
-    <div class="nav-links">
-      <a href="../productDescription/index.html">Product</a>
-      <a href="../pricing/pricing.html">Pricing</a>
-      <a href="../Team/team.html">Our Team</a>
-      <a href="../contacte-me/htmlpolari13s.html">Contact Us</a>
-      <a href="../simulation/simulation.html">Try It Out</a>
-      <a href="../pricing/shopping-cart.html">
-        <span class="material-symbols-outlined" aria-label="Shopping Basket">shopping_cart</span>
-      </a>
+
+    <div class="nav-right">
+
+      <div class="nav-links">
+        <a href="../productDescription/index.html">Product</a>
+        <a href="../pricing/pricing.html">Pricing</a>
+        <a href="../Team/team.html">Our Team</a>
+        <a href="../contacte-me/htmlpolari13s.html">Contact Us</a>
+        <a href="../simulation/simulation.html">Try It Out</a>
+      </div>
+
+      <div class="search-bar">  
+        <form novalidate action="/search" method="get" id="search-form" role="search">
+          <label for="search-query" class="visually-hidden">Search the site</label>
+          <div class="search-wrapper">
+            <input type="search" id="search-query" name="q" class="search-input" placeholder="Search..." required />
+            <button type="submit" class="search-button" aria-label="Submit search">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="shopping-cart">
+        <a href="../pricing/shopping-cart.html">
+          <span class="material-symbols-outlined" aria-label="Shopping Cart">shopping_cart</span>
+        </a>
+      </div>
+      
       <!-- Shopping cart link is just a placeholder -->
     </div>
-</nav>
+  </nav>
 </body>
-
-
-
-<!-- TODO: Can use the code Zach wrote for the nav -->
