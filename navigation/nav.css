@@ -43,8 +43,8 @@ nav .home {
   color: #eee;
   text-decoration: none;
   margin: 0 0.75rem;
-  font-weight: 300;
-  transition: color 0.2s ease, transform 0.2s ease;
+  /* font-weight: 300; */
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
@@ -53,9 +53,6 @@ nav .home {
 }
 
 /* Search Bar Styles */
-.search-bar {
-  padding-top: 1rem;
-}
 .search-bar form {
   display: flex;
   align-items: center;
