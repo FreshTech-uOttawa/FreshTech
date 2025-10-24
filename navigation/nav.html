@@ -1,30 +1,58 @@
 <head>
-  <link rel="stylesheet" href="nav.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,FILL,GRAD@20..48,0..1,-50..200&icon_names=home,search,shopping_cart&display=block" />
+  <link class="gitPath" rel="stylesheet" href="/navigation/nav.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,FILL,GRAD@20..48,0..1,-50..200&icon_names=home,search,shopping_cart&display=block"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
 </head>
 
 <body>
   <nav>
-    <a class="home" href="../">Polaris</a>
+    <a class="gitPath home" href="/">Polaris</a>
     <!-- Add/Replace with logo-->
 
     <div class="nav-right">
-
       <div class="nav-links">
-        <a href="../productDescription/index.html">Product</a>
-        <a href="../pricing/pricing.html">Pricing</a>
-        <a href="../Team/team.html">Our Team</a>
-        <a href="../contacte-me/htmlpolari13s.html">Contact Us</a>
-        <a href="../simulation/simulation.html">Try It Out</a>
+        <a class="gitPath" href="/productDescription/index.html">Product</a>
+        <a class="gitPath" href="/pricing/pricing.html">Pricing</a>
+        <a class="gitPath" href="/Team/team.html">Our Team</a>
+        <a class="gitPath" href="/contacte-me/htmlpolari13s.html">Contact Us</a>
+        <a class="gitPath" href="/simulation/simulation.html">Try It Out</a>
       </div>
 
-      <div class="search-bar">  
-        <form action="/search" method="get" id="search-form" role="search">
-          <label for="search-query" class="visually-hidden">Search the site</label>
+      <div class="search-bar">
+        <form
+          novalidate
+          action="/search"
+          method="get"
+          id="search-form"
+          role="search"
+        >
+          <label for="search-query" class="visually-hidden"
+            >Search the site</label
+          >
           <div class="search-wrapper">
-            <input type="search" id="search-query" name="q" class="search-input" placeholder="Search..."  />
-            <button type="submit" class="search-button" aria-label="Submit search">
+            <input
+              type="search"
+              id="search-query"
+              name="q"
+              class="search-input"
+              placeholder="Search..."
+              required
+            />
+            <button
+              type="submit"
+              class="search-button"
+              aria-label="Submit search"
+            >
               <span class="material-symbols-outlined">search</span>
             </button>
           </div>
@@ -33,10 +61,12 @@
 
       <div class="shopping-cart">
         <a href="../pricing/shopping-cart.html">
-          <span class="material-symbols-outlined" aria-label="Shopping Cart">shopping_cart</span>
+          <span class="material-symbols-outlined" aria-label="Shopping Cart"
+            >shopping_cart</span
+          >
         </a>
       </div>
-      
+
       <!-- Shopping cart link is just a placeholder -->
     </div>
   </nav>
