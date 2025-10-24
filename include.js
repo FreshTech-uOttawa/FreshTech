@@ -18,9 +18,17 @@ async function loadHTML(targetId, filePath) {
 }
 
 /* Loading the navigation when the page loaded */
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.hostname.includes("freshtech-uottawa")) {
-    loadHTML("nav-container", "/FreshTech/navigation/nav.html");
+document.addEventListener("DOMContentLoaded", async () => {
+  const isGithub = window.location.hostname.includes("freshtech-uottawa");
+
+  //Check all href in link/header/
+  if (isGithub) {
+    updateHref();
+  }
+
+  if (isGithub) {
+    await loadHTML("nav-container", "/FreshTech/navigation/nav.html");
+    updateHref();
   } else {
     loadHTML("nav-container", "/navigation/nav.html");
   }
@@ -31,3 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHTML("accueil-container", "./Accueil/PageAccueil.html");
   }
 });
+
+/**
+ * Function which updates all href to use the correct pathing of Github pages.
+ * This enables the navigation between pages locally and on github pages.
+ */
+function updateHref() {
+  document.querySelectorAll(".gitPath").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href) {
+      link.setAttribute("href", `/FreshTech${href}`);
+    }
+  });
+}
