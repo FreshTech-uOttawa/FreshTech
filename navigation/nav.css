@@ -40,11 +40,12 @@ nav .home {
 }
 
 .nav-links a {
-  color: #eee;
+  color: #ccc;
   text-decoration: none;
   margin: 0 0.75rem;
   /* font-weight: 300; */
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  border-radius: 6px;
 }
 
 .nav-links a:hover {
@@ -143,4 +144,27 @@ input[type="search"]::-webkit-search-cancel-button {
   nav a {
     margin: 0.5rem;
   }
+}
+
+.active {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a6c7f9;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }

@@ -30,7 +30,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadHTML("nav-container", "/FreshTech/navigation/nav.html");
     updateHref();
   } else {
-    loadHTML("nav-container", "/navigation/nav.html");
+    await loadHTML("nav-container", "/navigation/nav.html");
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".gitPath");
+
+    // Find the active page to add active class
+    navLinks.forEach((link) => {
+      const linkPage = link.getAttribute("href").split("/").pop();
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
   }
 
   const path = window.location.pathname;
