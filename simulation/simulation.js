@@ -32,7 +32,7 @@ let starAnimated = false;
 function positionStar() {
   if (isScreenVisible) {
     gsap.set(app, {
-      top: "60%",
+      top: "55%",
       left: "50%",
       xPercent: -50,
       yPercent: -50,
@@ -133,7 +133,7 @@ function animateScreen() {
       app,
       {
         opacity: 1,
-        top: "60%",
+        top: "55%",
         left: "50%",
         xPercent: -50,
         yPercent: -50,
