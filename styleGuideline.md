@@ -17,9 +17,13 @@ Text: 15px
 ### General
 
 **Primary**: #1D598F
+
 **Secondary**: #519DDB
+
 **Tertiary**: #9C9C9C
+
 **Black**: #000000
+
 **White**: #FFFFFF
 
 ### Shades
