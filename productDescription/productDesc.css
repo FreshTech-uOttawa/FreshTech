@@ -1,4 +1,3 @@
-
 h1 {
   color: #0f375c;
   font-family: verdana;
@@ -27,13 +26,13 @@ p {
 }
 
 section.intro {
-    border: 1px solid black;
-    position: relative;
+  border: 1px solid black;
+  position: relative;
 }
 
-div {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
-}
+/* div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+} */
