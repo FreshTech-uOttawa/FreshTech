@@ -1,9 +1,12 @@
 # Styling Guideline
 
+The website follow a professional design. Keep information clear and accessible.
+
 ## Fonts
 
 **Titles** (h1-5): TikTok Sans
-**Other**: Roboto
+
+**Other Text** (p, a, etc): Roboto
 
 ### Size
 
