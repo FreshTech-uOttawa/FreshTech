@@ -8,9 +8,22 @@ h2 {
   text-align: center;
 }
 img.b {
-  vertical-align:top;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 75%;
 }
-  
+img.c { /*images à gauche*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.d {  /*image à droite*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 p {
   text-align:center;
 }
@@ -27,4 +40,33 @@ p {
   cursor: pointer;
   background-color: #519DDB;
   border-radius: 6px;
+  font-weight: bold;
+  /*position absolute(?)*/
+}
+
+.dd {
+  text-align:right;
+}
+
+.barre-inferieure {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sous-titre {
+font-weight: bold;
+}
+
+.separation {
+background-color:rgb(155, 149, 149);
 }
