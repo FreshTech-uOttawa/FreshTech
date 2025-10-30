@@ -5,7 +5,7 @@ h1 {
 h2 {
   text-align: center;
 }
-img.a {
+img.b {
   vertical-align:top;
 }
   
@@ -13,7 +13,7 @@ p {
   text-align:center;
 }
 
-.button {
+a.button {
   border: none;
   color: white;
   padding: 15px 32px;
