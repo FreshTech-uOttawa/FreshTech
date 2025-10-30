@@ -1,4 +1,6 @@
-
+body {
+  background-color:white; /*#1D598F*/
+}
 h1 {
   text-align: center;
 }
@@ -13,7 +15,7 @@ p {
   text-align:center;
 }
 
-a.button {
+.button {
   border: none;
   color: white;
   padding: 15px 32px;
@@ -24,4 +26,5 @@ a.button {
   margin: 4px 2px;
   cursor: pointer;
   background-color: #519DDB;
+  border-radius: 6px;
 }
