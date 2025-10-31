@@ -102,7 +102,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/images/marble-texture.jpg") repeat;
+  background: url("../../images/marble-texture.jpg") repeat;
   background-size: contain;
   mix-blend-mode: overlay;
   filter: invert(1) blur(0.5px);
