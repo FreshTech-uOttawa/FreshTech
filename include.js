@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const path = window.location.pathname;
 
   if (path.endsWith("/") || path.endsWith("/index.html")) {
-    loadHTML("accueil-container", "./Accueil/PageAccueil.html");
+    loadHTML("accueil-container", "./accueil/accueil.html");
   }
 });
 

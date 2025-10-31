@@ -1,5 +1,5 @@
 body {
-  background-color:white; /*#1D598F*/
+  background-color: white; /*#1D598F*/
 }
 h1 {
   text-align: center;
@@ -13,19 +13,21 @@ img.b {
   margin-right: auto;
   opacity: 75%;
 }
-img.c { /*images à gauche*/
+img.c {
+  /*images à gauche*/
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-img.d {  /*image à droite*/
+img.d {
+  /*image à droite*/
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 p {
-  text-align:center;
+  text-align: center;
 }
 
 .button {
@@ -38,14 +40,14 @@ p {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: #519DDB;
+  background-color: #519ddb;
   border-radius: 6px;
   font-weight: bold;
   /*position absolute(?)*/
 }
 
 .dd {
-  text-align:right;
+  text-align: right;
 }
 
 .barre-inferieure {
@@ -64,9 +66,9 @@ p {
 }
 
 .sous-titre {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .separation {
-background-color:rgb(155, 149, 149);
+  background-color: rgb(155, 149, 149);
 }
