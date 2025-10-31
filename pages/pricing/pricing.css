@@ -25,7 +25,7 @@
       rgb(166, 199, 249, 0.6),
       rgb(166, 199, 249, 0.2)
     ),
-    url("/images/kitchen2.jpg") no-repeat fixed center/cover;
+    url("../../images/kitchen2.jpg") no-repeat fixed center/cover;
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
@@ -102,7 +102,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/images/marble-texture.jpg") repeat;
+  background: url("../../images/marble-texture.jpg") repeat;
   background-size: contain;
   mix-blend-mode: overlay;
   filter: invert(1) blur(0.5px);
