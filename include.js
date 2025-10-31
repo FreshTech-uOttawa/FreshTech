@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const path = window.location.pathname;
 
   if (path.endsWith("/") || path.endsWith("/index.html")) {
-    loadHTML("accueil-container", "./Accueil/PageAccueil.html");
+    loadHTML("accueil-container", "./pages/accueil/accueil.html");
   }
 });
 
@@ -58,7 +58,7 @@ function updateHref() {
   document.querySelectorAll(".gitPath").forEach((link) => {
     const href = link.getAttribute("href");
     if (href) {
-      link.setAttribute("href", `/FreshTech${href}`);
+      link.setAttribute("href", `/FreshTech/pages/${href}`);
     }
   });
 }
