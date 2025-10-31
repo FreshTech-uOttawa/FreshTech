@@ -32,7 +32,7 @@ let starAnimated = false;
 function positionStar() {
   if (isScreenVisible) {
     gsap.set(app, {
-      top: "60%",
+      top: "55%",
       left: "50%",
       xPercent: -50,
       yPercent: -50,
@@ -113,23 +113,27 @@ function animateScreen() {
       ease: "circ.in",
       immediateRender: false,
     })
-    .to(fridge, {
-      opacity: 0.1,
-      duration: 1,
-    })
+    .to(
+      fridge,
+      {
+        opacity: 0.1,
+        duration: 1,
+      },
+      "-=0.5"
+    )
     .to(
       ".title",
       {
         opacity: 0.1,
         duration: 1,
       },
-      "-=1"
+      "-=1.5"
     )
     .to(
       app,
       {
         opacity: 1,
-        top: "60%",
+        top: "55%",
         left: "50%",
         xPercent: -50,
         yPercent: -50,
@@ -138,7 +142,7 @@ function animateScreen() {
         duration: 1.4,
         ease: "power3.inOut",
       },
-      "-=0.8"
+      "-=1"
     )
     .to(
       stopSimulationBtn,
@@ -181,11 +185,11 @@ async function closeScreen() {
     .to(app, {
       opacity: 0,
       top: "25%",
-      left: "30%",
+      left: "45%",
       xPercent: 50,
       yPercent: 50,
       duration: 1,
-      ease: "power3.inOut",
+      ease: "power3.in",
       width: getWindowSize()[0] / 2,
       height: getWindowSize()[1] / 2,
     })

@@ -91,10 +91,10 @@ html {
 @keyframes breathing-btn {
   0%,
   100% {
-    box-shadow: #00c8ff 0 0 15px 0.03px;
+    box-shadow: #53a2f5 0 0 15px 0.03px;
   }
   50% {
-    box-shadow: #00c8ff 0 0 15px 3px;
+    box-shadow: #53a2f5 0 0 15px 3px;
   }
 }
 
@@ -110,7 +110,7 @@ html {
   font-size: xxx-large;
   text-align: center;
   color: white;
-  text-shadow: 0 0 10px #fff, 0 0 25px #00c8ff;
+  text-shadow: 0 0 10px #fff, 0 0 25px #53a2f5;
   z-index: 2;
   position: relative;
   margin-bottom: 0;
@@ -119,10 +119,10 @@ html {
 @keyframes title-glow {
   0%,
   100% {
-    text-shadow: 0 0 8px #fff, 0 0 16px #00c8ff;
+    text-shadow: 0 0 8px #fff, 0 0 16px #53a2f5;
   }
   50% {
-    text-shadow: 0 0 20px #fff, 0 0 40px #00c8ff;
+    text-shadow: 0 0 20px #fff, 0 0 40px #53a2f5;
   }
 }
 
