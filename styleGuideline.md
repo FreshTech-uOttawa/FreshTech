@@ -14,7 +14,7 @@ Title (h1): 40px
 
 Second header (h2): 28px
 
-Third Header (h3): 22px  
+Third Header (h3): 22px
 
 Text: 15px
 
@@ -34,4 +34,4 @@ Text: 15px
 
 ### Shades
 
-We can use any shades of these colors from the file: palette.png which dictates all accepted shades.
+We can use any shades of these colors from the file: styleGuidelinePalette.png which dictates all accepted shades.
