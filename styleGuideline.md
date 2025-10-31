@@ -1,18 +1,21 @@
 # Styling Guideline
 
-The website follow a professional design. Keep information clear and accessible.
+The website follow a professional design. Keep information clear and easy to understand.
 
 ## Fonts
 
-**Titles** (h1-5): TikTok Sans
+**Titles** (h1 to h5): TikTok Sans
 
 **Other Text** (p, a, etc): Roboto
 
 ### Size
 
 Title (h1): 40px
+
 Second header (h2): 28px
+
 Third Header (h3): 22px  
+
 Text: 15px
 
 ## Color Palette
