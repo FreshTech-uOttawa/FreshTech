@@ -1,4 +1,10 @@
-h1 {
+.title-section {
+  text-align: center;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
 }
 
