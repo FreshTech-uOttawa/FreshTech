@@ -43,6 +43,7 @@
     drop-shadow(0 0 100px #2db0f7);
 }
 
+
 .team-container {
   display: grid;
   grid-template-columns: repeat(3, 300px);
@@ -50,6 +51,8 @@
   gap: 40px;
   justify-content: center;
   padding: 20px;
+  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolour-night-sky-background_1048-16653.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: 100%;
 }
 
 .team-member {
