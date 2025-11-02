@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us | POLARIS</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | POLARIS</title>
 
-  <!-- Roboto for body text -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Navigation Script and Global css -->
+    <script src="../../include.js"></script>
+    <link rel="stylesheet" href="../../global_style.css" />
 
-  <!-- CSS externe -->
-  <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-  <div class="background-image"></div>
-
-  <section class="space">
-    <div class="vignette"></div>
-   
-
-    <header class="header">
-      <h1 class="title">Contact Us</h1>
+    <!-- CSS externe -->
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header>
+      <div id="nav-container"></div>
     </header>
+    <div class="background-image"></div>
 
-    <div class="card">
-      <h3>We’d love to hear from you</h3>
-      <p class="helper-note">Send us your message and we’ll get back to you.</p>
+    <section class="space">
+      <div class="vignette"></div>
 
-      <form id="contactForm" novalidate>
-        <input id="name" type="text" placeholder="Full Name" required />
-        <input id="email" type="email" placeholder="Email Address" required />
-        <input id="subject" type="text" placeholder="Subject (optional)" />
-        <textarea id="msg" placeholder="Your Message" required></textarea>
+      <header class="header">
+        <h1 class="title">Contact Us</h1>
+      </header>
 
-        <button class="btn" type="submit">Send message</button>
+      <div class="card">
+        <h3>We’d love to hear from you</h3>
+        <p class="helper-note">
+          Send us your message and we’ll get back to you.
+        </p>
 
-        <p id="toast" class="toast" role="status" aria-live="polite"></p>
+        <form id="contactForm" novalidate>
+          <input id="name" type="text" placeholder="Full Name" required />
+          <input id="email" type="email" placeholder="Email Address" required />
+          <input id="subject" type="text" placeholder="Subject (optional)" />
+          <textarea id="msg" placeholder="Your Message" required></textarea>
 
-        <div class="helper">
-          <a id="mailtoLink" href="mailto:Freshtech@gmail.com">Open your mail app</a>
-          <button type="button" id="copyBtn">Copy email address</button>
-          <span id="copied"></span>
-        </div>
-      </form>
-    </div>
-  </section>
+          <button class="btn" type="submit">Send message</button>
 
-<!-- JS externe -->
-<script src="contact.js"></script>
-</body>
+          <p id="toast" class="toast" role="status" aria-live="polite"></p>
+
+          <div class="helper">
+            <a id="mailtoLink" href="mailto:Freshtech@gmail.com"
+              >Open your mail app</a
+            >
+            <button type="button" id="copyBtn">Copy email address</button>
+            <span id="copied"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- JS externe -->
+    <script src="contact.js"></script>
+  </body>
 </html>
