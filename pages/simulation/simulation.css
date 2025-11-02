@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   overflow: hidden;
 }
 
@@ -68,7 +68,7 @@ html {
 }
 
 .begin-simulation-btn {
-  font-size: x-large;
+  font-family: "Roboto", sans-serif;
   width: auto;
   padding: 15px 30px;
   text-align: center;
