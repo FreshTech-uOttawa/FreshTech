@@ -56,9 +56,9 @@
 }
 
 .team-member {
-  border: 1px solid #000;
+  border: 5px solid #000;
   border-radius: 8px;
-  background:  #05284d;
+  background:  #00000045;
   text-align: center;
   display: flex;
   flex-direction: column;
