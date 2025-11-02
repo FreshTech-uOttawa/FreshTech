@@ -22,10 +22,10 @@
   height: 92vh;
   background: linear-gradient(
       to bottom,
-      rgb(166, 199, 249, 0.6),
-      rgb(166, 199, 249, 0.2)
+      rgb(83, 162, 245, 0.3),
+      rgba(8, 30, 50, 0.3)
     ),
-    url("../../images/kitchen2.jpg") no-repeat fixed center/cover;
+    url("../../images/fridge-background.jpg") no-repeat fixed center/cover;
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
@@ -39,7 +39,7 @@
   height: 100%;
   background: inherit;
   background-attachment: fixed;
-  filter: blur(2px);
+  filter: blur(3px);
   z-index: 0;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .page-title {
-  color: #000;
+  color: #fff;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -60,7 +60,7 @@
 
 #pricing-introduction .material-symbols-outlined {
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   text-shadow: 0 1px 15px rgba(f, 7, 7, 0.3);
   animation: bounce 2s infinite;
@@ -88,17 +88,21 @@
 }
 
 /* Pricing Tiers Section */
-#pricing-tiers {
+#pricing-plans {
   position: relative;
   padding: 5rem 10%;
   color: #fff;
   text-align: center;
-  background: linear-gradient(to bottom left, rgb(16, 57, 96), rgb(8, 29, 48));
+  background: linear-gradient(
+    to bottom right,
+    var(--background-color),
+    rgb(7, 21, 36)
+  );
   overflow: hidden;
 }
 
 /* Background and layout */
-#pricing-tiers::before {
+#pricing-plans::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -116,7 +120,7 @@
   z-index: 1;
 }
 
-#pricing-tiers h1 {
+#pricing-plans h1 {
   margin-bottom: 3rem;
   text-transform: capitalize;
 }
@@ -131,6 +135,7 @@
   margin: 1rem;
   width: 300px;
   display: inline-block;
+  vertical-align: top;
   box-shadow: 0 10px rgb(166, 199, 249, 0);
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
@@ -179,9 +184,109 @@
   margin-top: 1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .select-plan-button:hover {
-  background: var(--background-color);
+  background: var(--tertiary-color);
+  color: var(--background-color);
+}
+
+/* Comparison table styling */
+.comparison-container {
+  margin: 3rem auto;
+}
+
+.comparison-table {
+  margin: auto;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 25px #134675, inset 0 0 5px var(--secondary-color);
+}
+
+.comparison-table thead {
+  position: relative;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--background-color);
+}
+
+.comparison-table th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.comparison-table th:first-child {
+  text-align: left;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #d6d6d6;
+}
+
+.comparison-table tr {
+  border-bottom: 1px solid rgb(166, 199, 249, 0.1);
+  box-shadow: 0 0 3px rgb(166, 199, 249, 0.6);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s;
+}
+
+.comparison-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 450;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+
+.material-symbols-outlined.icon-gradient {
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .comparison-container {
+    padding: 2rem 1rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+  }
+
+  .comparison-container h1 {
+    font-size: 1.6rem;
+  }
 }
