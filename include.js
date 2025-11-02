@@ -58,7 +58,7 @@ function updateHref() {
   document.querySelectorAll(".gitPath").forEach((link) => {
     const href = link.getAttribute("href");
     if (href) {
-      link.setAttribute("href", `/FreshTech/pages/${href}`);
+      link.setAttribute("href", `/FreshTech${href}`);
     }
   });
 }

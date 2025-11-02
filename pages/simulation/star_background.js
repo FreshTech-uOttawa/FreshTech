@@ -235,13 +235,13 @@ logoScene.add(dirLight);
 
 // Load FBX model
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("/images/4PointStarTexture.png");
+const texture = textureLoader.load("../../images/4PointStarTexture.png");
 texture.anisotropy = logoRenderer.capabilities.getMaxAnisotropy();
 const loader = new THREE.FBXLoader();
 let logoModel = null;
 
 // "4 Point Star" by Yessica Servin Dominguez, used under CC Attribution 4.0. https://sketchfab.com/3d-models/4-point-star-c1481a0c1d4540818b6bcfd83dd5034b)
-loader.load("/images/4PointStar.fbx", (object) => {
+loader.load("../../images/4PointStar.fbx", (object) => {
   object.traverse((child) => {
     if (child.isMesh) {
       child.material.map = texture;
