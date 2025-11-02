@@ -3,22 +3,22 @@ h1 {
 }
 
 .team-container {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 350px);
+  gap: 40px;
+  justify-content: center;
   padding: 20px;
-  flex-wrap: wrap;
 }
 
 .team-member {
   border: 1px solid #000;
-  padding: 15px;
-  box-sizing: border-box;
-  text-align: center;
   border-radius: 8px;
   background: #f9f9f9;
-
-  flex: 0 1 calc((100% / 3) - 13.33px);
-  min-width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
