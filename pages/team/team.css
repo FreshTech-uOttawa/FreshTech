@@ -7,10 +7,10 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolour-night-sky-background_1048-16653.jpg?semt=ais_hybrid&w=740&q=80');
-  background-size: auto 100%;
+  background-image: url('https://www.shutterstock.com/image-photo/silhouettes-diverse-business-people-working-600nw-1937014780.jpg');
+  background-size: 100%;
   background-position: center;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
 }
 
 .title-section h1 {
@@ -33,7 +33,14 @@
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 50px solid rgb(255, 255, 255); 
-   margin-top: 30px;
+  margin-top: 30px;
+  filter:
+    drop-shadow(0 0 5px #00b3ff87)
+    drop-shadow(0 0 10px #00b3ff)
+    drop-shadow(0 0 20px #00b3ff)
+    drop-shadow(0 0 40px #0099ff)
+    drop-shadow(0 0 80px #0077ffaf)
+    drop-shadow(0 0 100px #2db0f7);
 }
 
 .team-container {
