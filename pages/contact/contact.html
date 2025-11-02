@@ -1,58 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Us | POLARIS</title>
-
-    <!-- Navigation Script and Global css -->
+    <title>Contactez-nous | Polaris</title>
     <script src="../../include.js"></script>
     <link rel="stylesheet" href="../../global_style.css" />
-
-    <!-- CSS externe -->
-    <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <header>
       <div id="nav-container"></div>
+      <h1>Contactez-nous</h1>
+      <p>FreshTech — Polaris</p>
     </header>
-    <div class="background-image"></div>
 
-    <section class="space">
-      <div class="vignette"></div>
+    <main>
+      <h2>Envoyez-nous un message</h2>
 
-      <header class="header">
-        <h1 class="title">Contact Us</h1>
-      </header>
-
-      <div class="card">
-        <h3>We’d love to hear from you</h3>
-        <p class="helper-note">
-          Send us your message and we’ll get back to you.
+      <!-- Formulaire simple : ouvre le client mail de l'utilisateur -->
+      <form
+        action="mailto:freshtechuottawa@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <p>
+          <label for="nom">Nom :</label><br />
+          <input type="text" id="nom" name="nom" required />
         </p>
 
-        <form id="contactForm" novalidate>
-          <input id="name" type="text" placeholder="Full Name" required />
-          <input id="email" type="email" placeholder="Email Address" required />
-          <input id="subject" type="text" placeholder="Subject (optional)" />
-          <textarea id="msg" placeholder="Your Message" required></textarea>
+        <p>
+          <label for="email">Adresse courriel :</label><br />
+          <input type="email" id="email" name="email" required />
+        </p>
 
-          <button class="btn" type="submit">Send message</button>
+        <p>
+          <label for="message">Message :</label><br />
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </p>
 
-          <p id="toast" class="toast" role="status" aria-live="polite"></p>
+        <p>
+          <button type="submit">Envoyer</button>
+          <button type="reset">Effacer</button>
+        </p>
+      </form>
 
-          <div class="helper">
-            <a id="mailtoLink" href="mailto:Freshtech@gmail.com"
-              >Open your mail app</a
-            >
-            <button type="button" id="copyBtn">Copy email address</button>
-            <span id="copied"></span>
-          </div>
-        </form>
-      </div>
-    </section>
+      <p>
+        Ou écrivez-nous directement à :
+        <a href="mailto:freshtechuottawa@gmail.com"
+          >freshtechuottawa@gmail.com</a
+        >
+      </p>
+    </main>
 
-    <!-- JS externe -->
-    <script src="contact.js"></script>
+    <footer>
+      <p>© 2025 FreshTech — Tous droits réservés</p>
+    </footer>
   </body>
 </html>
