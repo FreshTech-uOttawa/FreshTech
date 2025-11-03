@@ -26,9 +26,7 @@
         >
       </section>
 
-      <section id="pricing-tiers">
-        <div class="background-overlay"></div>
-
+      <section id="pricing-plans">
         <div class="tier-container">
           <h1>Choose the right plan for you</h1>
           <div class="basic tier">
@@ -36,13 +34,18 @@
             <p class="starting-price">starting at 2000$</p>
             <p class="monthly-price">+ 30$/month</p>
             <ul>
-              <li>Basic Feature #1</li>
-              <li>Basic Feature #2</li>
-              <li>Basic Feature #3</li>
-              <li>...</li>
+              <li>Freshness tracking with real-time expiration alerts</li>
+              <li>Built-in inventory management for up to 50 items</li>
+              <li>Basic recipe suggestions based on current fridge content</li>
+              <li>
+                Synced manual grocery list creation via the Polaris Screen/App
+              </li>
+              <li>
+                Energy-efficient operation with automatic cooling optimization
+              </li>
             </ul>
             <button class="select-plan-button">Select Plan</button>
-            <!-- Figure out where this button leads (js)-->
+            <!-- Figure out where this button leads (js) -->
           </div>
 
           <div class="pro tier">
@@ -50,10 +53,15 @@
             <p class="starting-price">starting at 2000$</p>
             <p class="monthly-price">+ 50$/month</p>
             <ul>
-              <li>Pro Feature #1</li>
-              <li>Pro Feature #2</li>
-              <li>Pro Feature #3</li>
-              <li>...</li>
+              <li>All Basic Plan features, plus:</li>
+              <li>Unlimited inventory support</li>
+              <li>
+                AI-driven Personalized Nutrition insights and dietary tracking
+              </li>
+              <li>
+                Smart Grocery Ordering with automatic deal-finding from nearby
+                stores
+              </li>
             </ul>
             <button class="select-plan-button">Select Plan</button>
             <!-- Figure out where this button leads (js)-->
@@ -64,57 +72,202 @@
             <p class="starting-price">starting at 2000$</p>
             <p class="monthly-price">+ 80$/month</p>
             <ul>
-              <li>Premium Feature #1</li>
-              <li>Premium Feature #2</li>
-              <li>Premium Feature #3</li>
-              <li>...</li>
+              <li>All Pro Plan features, plus:</li>
+              <li>
+                Multi-user profiles with individualized nutrition and grocery
+                plans
+              </li>
+              <li>
+                Dynamic recipe suggestions using seasonal and local ingredients
+              </li>
+              <li>Voice assistant integration</li>
             </ul>
             <button class="select-plan-button">Select Plan</button>
             <!-- Figure out where this button leads (js)-->
           </div>
         </div>
-      </section>
-
-      <section id="tier-comparisons">
-        <h2>Compare Our Plans</h2>
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Features</th>
-              <th>Basic</th>
-              <th>Pro</th>
-              <th>Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Feature 1</td>
-              <td>"Check"</td>
-              <td>"Check"</td>
-              <td>"Check"</td>
-            </tr>
-            <tr>
-              <td>Feature 2</td>
-              <td>"Check"</td>
-              <td>"Check"</td>
-              <td>"Check"</td>
-            </tr>
-            <tr>
-              <td>Feature 3</td>
-              <td>"X"</td>
-              <td>"Check"</td>
-              <td>"Check"</td>
-            </tr>
-            <tr>
-              <td>Feature 4</td>
-              <td>"X"</td>
-              <td>"X"</td>
-              <td>"Check"</td>
-            </tr>
-            <!-- Add proper features when the time comes -->
-            <!-- Add proper checkmarks, x's-->
-          </tbody>
-        </table>
+        <div class="comparison-container">
+          <h1>Compare Our Plans</h1>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Basic</th>
+                <th>Pro</th>
+                <th>Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Freshness tracking with real-time expiration alerts</td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Built-in inventory management</td>
+                <td>Up to 50 items</td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                  (Unlimited)
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                  (Unlimited)
+                </td>
+              </tr>
+              <tr>
+                <td>Recipe suggestions based on fridge content</td>
+                <td>Basic</td>
+                <td>Smart</td>
+                <td>Dynamic & Seasonal</td>
+              </tr>
+              <tr>
+                <td>Manual grocery list (via Polaris Screen/App)</td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Energy-efficient operation with auto cooling optimization
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Personalized nutrition insights & dietary tracking</td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Smart grocery ordering with automatic deal-finding</td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Multi-user profiles with individual nutrition/grocery plans
+                </td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Seasonal & local ingredient recipes</td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Voice assistant integration</td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined">close_small</span>
+                </td>
+                <td>
+                  <span class="material-symbols-outlined icon-gradient"
+                    >check_small</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="custom-shape-divider-bottom-1762119780">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
       </section>
 
       <section id="plan-recommendation">
