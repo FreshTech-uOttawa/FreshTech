@@ -50,10 +50,7 @@ a {
   background-color: #519ddb;
   border-radius: 6px;
   font-weight: bold;
-  /*top: 70%; 
-  left: 35%;
-  -ms-transform: translate(100%, 50%);
-  transform: translate(100%, 50%);*/
+
 }
 
 .button2 {
@@ -75,21 +72,6 @@ a {
   transform: translate(-100%, 75%);
 }
 
-/*.gauche {
-  margin: 0;
-  top: 20%;
-  left: 25%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.droite {
- margin: 0;
- top: 20%;
- left: 75%;
- -ms-transform: translate(-20%, -75%);
- transform: translate(-20%, -75%);
-}*/
 
 .dd {
   text-align: right;
