@@ -146,14 +146,14 @@ input[type="search"]::-webkit-search-cancel-button {
   }
 }
 
-.active {
+.active-nav {
   color: #fff;
   font-weight: 600;
   position: relative;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.active::after {
+.active-nav::after {
   content: "";
   position: absolute;
   bottom: -4px;

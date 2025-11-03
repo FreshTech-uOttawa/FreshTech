@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   navLinks.forEach((link) => {
     const linkPage = link.getAttribute("href").split("/").pop();
     if (linkPage === currentPage) {
-      link.classList.add("active");
+      link.classList.add("active-nav");
     }
   });
 
