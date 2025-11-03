@@ -14,7 +14,7 @@
 }
 
 .title-section h1 {
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: bold;
   color: white;
   text-shadow:
@@ -41,8 +41,21 @@
     drop-shadow(0 0 40px #0099ff)
     drop-shadow(0 0 80px #0077ffaf)
     drop-shadow(0 0 100px #2db0f7);
+ cursor: pointer;
+ transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
+.down-arrow:hover {
+  transform: translateY(-5px);
+  filter: 
+    drop-shadow(0 0 5px #00b3ff87)
+    drop-shadow(0 0 10px #00b3ff)
+    drop-shadow(0 0 20px #00b3ff)
+    drop-shadow(0 0 40px #0099ff)
+    drop-shadow(0 0 80px #0077ffaf)
+    drop-shadow(0 0 100px #2db0f7)
+    drop-shadow(0 0 10px #00aaff);
+}
 
 .team-container {
   display: grid;
@@ -80,11 +93,36 @@
   object-fit: cover;
   object-position: center;
   margin-left: -10%;
-  border-radius: 8px 8px 0 0;
-  border-color: #000;
-  border: 3px;
+  border-radius: 12px 12px 0 0;
+  border: 3px solid #444;
 }
 
 .team-member h3 {
   margin-top: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.team-member button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member button:hover {
+  background-color: #000000;
+}
+
+.team-member p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #ccc;
 }
