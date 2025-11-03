@@ -11,7 +11,20 @@ async function loadHTML(targetId, filePath) {
   }
   const response = await fetch(filePath);
   if (response.ok) {
-    container.innerHTML = await response.text();
+    const html = await response.text();
+    container.innerHTML = html;
+
+    //Reload any scripts that couldnt run because of the dynamic load
+    const scriptList = container.querySelectorAll("script");
+    for (const oldScript of scriptList) {
+      const newScript = document.createElement("script");
+      if (oldScript.src) {
+        newScript.src = oldScript.src;
+      } else {
+        newScript.textContent = oldScript.textContent;
+      }
+      document.body.appendChild(newScript);
+    }
   } else {
     container.innerHTML = `<p>Error loading ${filePath}</p>`;
   }
