@@ -1,12 +1,78 @@
+#haut-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 92vh;
+  background: linear-gradient(
+      to bottom,
+      rgb(166, 199, 249, 0.6),
+      rgb(166, 199, 249, 0.2)
+    ),
+    url("../../images/BeauFrigo.jpg") no-repeat fixed center/cover;
+  overflow: hidden;
+  opacity: 100%;
+  animation: fadeIn 1.5s ease forwards;
+  background-size: cover;
+  line-height: 200px;
+}
+
+#haut-page::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+#haut-page .page-titre,
+#haut-page .material-symbols-outlined {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #000;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 15px rgba(7, 7, 7, 0.3);
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
 body {
   background-color: white; /*#1D598F*/
 }
-h1 {
+
+h3 {
   text-align: center;
 }
-h2 {
-  text-align: center;
-}
+
+
 img.b {
   display: block;
   margin-left: auto;
@@ -30,6 +96,7 @@ img.d {
 
 p {
   text-align: center;
+  font-weight: bold;
 }
 
 a {
