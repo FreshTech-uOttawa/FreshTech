@@ -32,7 +32,7 @@ section.desc {
 }
 
 div.flex-container {
-  padding-top: 100px;
+  padding: 100px 0px;
   display: flex;
   flex-direction: row;
   background: 
@@ -79,7 +79,7 @@ div2.flex-container2 > section:hover {
 div.details{
   color: white;
   background-color:black;
-  padding: 25px 44px;
+  padding: 25px 44px 90vh;
 }
 
 /* Use media query and show the flex items vertically if screen width is less than 600px */
