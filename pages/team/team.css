@@ -66,6 +66,14 @@
   color: white;
 }
 
+.team-member img {
+  width: 120%;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  margin-left: -10%;
+  border-radius: 8px 8px 0 0;
+}
 
 .team-member h3 {
   margin-top: 0;
