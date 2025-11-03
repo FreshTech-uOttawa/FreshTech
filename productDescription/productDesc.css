@@ -1,0 +1,38 @@
+h1 {
+  color: #0f375c;
+  font-family: verdana;
+  font-size: 40px;
+  background-color: lightblue;
+  position: relative;
+  border: 4px black;
+}
+
+h2 {
+  color: black;
+  font-family: verdana;
+  font-size: 28px;
+}
+
+h3 {
+  color: black;
+  font-family: verdana;
+  font-size: 22px;
+}
+
+p {
+  color: black;
+  font-family: verdana;
+  font-size: 15px;
+}
+
+section.intro {
+  border: 1px solid black;
+  position: relative;
+}
+
+/* div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+} */
