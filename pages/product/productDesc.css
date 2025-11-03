@@ -1,33 +1,29 @@
-h1 {
-  font-family: verdana;
-  font-size: 74px;
-}
-
-h2 {
-  color: white;
-  background-color: #153249;
-  font-family: verdana;
-  font-size: 56px;
-  margin: 0;
-  padding: 5px 24px;
-}
-
-h3 {
-  font-family: verdana;
-  font-size: 44px;
+h4 {
+  font-size: 20px;
 }
 
 p {
   font-family: verdana;
-  font-size: 30px;
+  font-size: 15px;
 }
 
 section.intro {
   color: white;
-  border: 1px solid #153249;
-  padding-left: 24px;
+  padding: 0px 20%;
   position: relative;
-  background: linear-gradient(to bottom left, rgb(16, 57, 96), rgb(8, 29, 48));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 92vh;
+  background: linear-gradient(
+      to bottom,
+      rgb(83, 162, 245, 0.3),
+      rgba(8, 30, 50, 0.3)
+    ),
+    url("../../images/ProductDesctriptionBackground.jpg") no-repeat fixed center/cover;
+  overflow: hidden;
 }
 
 section.desc {
@@ -36,20 +32,24 @@ section.desc {
 }
 
 div.flex-container {
+  padding-top: 100px;
   display: flex;
-  /* Show the flex items horizontally */
   flex-direction: row;
+  background: 
+    linear-gradient(to bottom right, rgb(15, 55, 92, 0.95), rgb(7, 21, 36, 0.95)),
+    url("../../images/marble-texture.jpg") repeat;
+  overflow: hidden;
 }
 
 div.flex-container > div {
-  margin: 10px;
+  margin: 20px;
   background-size: contain;
 }
 
 .fridge-container {
-  padding-top: 50px;
-  width: 2000px; /* Set the desired width for the cropped area */
-  height: 1000px; /* Set the desired height for the cropped area */
+  padding-top: 10px;
+  width: 80vw; /* Set the desired width for the cropped area */
+  height: 64vh; /* Set the desired height for the cropped area */
   overflow: hidden; /* Ensures any part of the image outside the container is hidden */
 }
 
@@ -60,22 +60,26 @@ div.flex-container > div {
   object-position: center; /* Centers the image within the container (default) */
 }
 
-div.flex-container2 {
+div2.flex-container2 {
   display: flex;
-  /* Show the flex items vertically */
   flex-direction: column;
   color: white;
-  background-color: #1D598F;
 }
 
-div.flex-container2 > section {
-  margin: 2px 30px;
+div2.flex-container2 > section {
+  margin: 10px 15% 10px 3%;
   border-bottom: 2px solid white;
   transition: transform 0.3s ease-in-out;
 }
 
-div.flex-container2 > section:hover {
+div2.flex-container2 > section:hover {
   transform: translateX(15px) scale(1.02);
+}
+
+div.details{
+  color: white;
+  background-color:black;
+  padding: 25px 44px;
 }
 
 /* Use media query and show the flex items vertically if screen width is less than 600px */
