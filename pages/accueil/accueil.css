@@ -102,15 +102,7 @@ a {
   padding: 10px;
   color:white;
   text-align: center;
-}
-
-.container div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  
+  line-height: 2.5;
 }
 
 .sous-titre {
@@ -127,7 +119,7 @@ a {
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-.slideshow-container {
+.slideshow-cont {
   max-width: 500px;
   position: relative;
   margin: auto;
@@ -152,22 +144,22 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
-.container .box { 
+.cont .box { 
                 margin:50px; 
                 display:table; 
             } 
-            .container .box .box-row { 
+            .cont .box .box-row { 
                 display:table-row; 
                 width : 120%;
             } 
-            .container .box .box-cell.box1 { 
+            .cont .box .box-cell.box1 { 
 
                 text-align:justify; 
              } 
-            .container .box .box-cell { 
+            .cont .box .box-cell { 
                 display:table-cell; 
             }
-            .container .box .box-cell.box2 { 
+            .cont .box .box-cell.box2 { 
                 text-align:justify;
                 padding-left: 10px;
             }
