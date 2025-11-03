@@ -58,6 +58,25 @@
   text-shadow: 0 1px 15px rgba(7, 7, 7, 0.3);
 }
 
+.monthly-price,
+.starting-price {
+  font-weight: 500;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 #pricing-introduction .material-symbols-outlined {
   font-size: 3rem;
   color: #fff;
@@ -171,6 +190,10 @@
 }
 
 .tier ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0.5rem 0;
   padding: 0.5rem 0;
 }
 
@@ -321,6 +344,108 @@
   fill: #000;
 }
 
+/* Recommendation section */
+#plan-recommendation {
+  background-color: #000;
+  color: #d6d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: left; /* align text left */
+}
+
+.recommendation-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+.recommendation-inner h1,
+.recommendation-inner h3,
+.recommendation-content {
+  width: 100%;
+}
+
+.recommendation-inner h3 {
+  padding-top: 3px;
+  font-weight: 100;
+}
+
+.recommendation-content {
+  margin-top: 2rem;
+}
+
+#question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-radius: 0.8rem 0.8rem 0.8rem 0;
+  overflow: hidden;
+}
+
+.input-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+#answer-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: background 0.3s;
+}
+
+#answer-input:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#next-btn {
+  background: linear-gradient(to left, var(--primary-color), #5ca3f0);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 768px) {
   .comparison-container {
     padding: 2rem 1rem;
@@ -331,11 +456,9 @@
     font-size: 0.85rem;
     padding: 0.75rem;
   }
-}
 
-/* Recommendation section */
-#plan-recommendation {
-  padding: 5rem 10%;
-  background-color: #000;
-  color: #fff;
+  .custom-shape-divider-bottom-1762119780 svg {
+    width: calc(135% + 1.3px);
+    height: 100px;
+  }
 }
