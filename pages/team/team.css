@@ -80,9 +80,8 @@
   object-fit: cover;
   object-position: center;
   margin-left: -10%;
-  border-radius: 8px 8px 0 0;
-  border-color: #000;
-  border: 3px;
+  border-radius: 12px 12px 0 0;
+  border: 3px solid #444;
 }
 
 .team-member h3 {
