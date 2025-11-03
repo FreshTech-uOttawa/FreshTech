@@ -8,7 +8,7 @@
   height: 100vh;
   text-align: center;
   background-image: url('https://www.shutterstock.com/image-photo/silhouettes-diverse-business-people-working-600nw-1937014780.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -52,7 +52,7 @@
   justify-content: center;
   padding: 20px;
   background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolour-night-sky-background_1048-16653.jpg?semt=ais_hybrid&w=740&q=80');
-  background-size: 100%;
+  background-size: cover;
 }
 
 .team-member {
@@ -67,12 +67,14 @@
 }
 
 .team-member img {
-  width: 120%;
-  height: 150px;
+  width: 140%;
+  height: 250px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   margin-left: -10%;
   border-radius: 8px 8px 0 0;
+  border-color: #000;
+  border: 3px;
 }
 
 .team-member h3 {
