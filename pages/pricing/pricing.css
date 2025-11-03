@@ -299,6 +299,28 @@
   display: inline-block;
 }
 
+/* Curvy Section Divider */
+.custom-shape-divider-bottom-1762119780 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1762119780 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 149px;
+}
+
+.custom-shape-divider-bottom-1762119780 .shape-fill {
+  fill: #000;
+}
+
 @media (max-width: 768px) {
   .comparison-container {
     padding: 2rem 1rem;
@@ -309,4 +331,11 @@
     font-size: 0.85rem;
     padding: 0.75rem;
   }
+}
+
+/* Recommendation section */
+#plan-recommendation {
+  padding: 5rem 10%;
+  background-color: #000;
+  color: #fff;
 }
