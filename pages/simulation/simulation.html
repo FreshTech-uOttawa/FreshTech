@@ -21,202 +21,221 @@
     />
   </head>
   <body>
-    <div style="z-index: 3" id="nav-container"></div>
+    <header>
+      <div style="z-index: 3" id="nav-container"></div>
+    </header>
 
     <canvas id="bgCanvas"></canvas>
 
-    <h1 class="title">Simulation</h1>
+    <main>
+      <section id="simulation-section">
+        <h1 class="title">Simulation</h1>
+        <button id="beginSimulation" class="button begin-simulation-btn">
+          Begin Simulation
+        </button>
+      </section>
 
-    <button id="beginSimulation" class="button begin-simulation-btn">
-      Begin Simulation
-    </button>
+      <section id="showcase-section">
+        <button id="stopSimulation" class="close-btn">
+          <i class="material-icons">close</i>
+        </button>
 
-    <button id="stopSimulation" class="close-btn">
-      <i class="material-icons">close</i>
-    </button>
-
-    <div class="frigo-container">
-      <img
-        class="frigo"
-        src="../../images/polarisFridgeEmptyScreen.png"
-        alt="Image of a fridge"
-        width="50%"
-        height="50%"
-      />
-      <div id="starContainer">
-        <canvas id="starCanvas"></canvas>
-      </div>
-    </div>
-
-    <div class="screen" id="app">
-      <div class="top-bar">
-        <h3 id="date">Date</h3>
-        <h3 id="time">Time</h3>
-      </div>
-      <h1 style="text-align: center; margin: 0">Polaris</h1>
-      <!-- Page Content -->
-      <div class="content">
-        <div>
-          <h3>Recipes For You</h3>
-          <div class="scrollable">
-            <div class="recipe">
-              <video
-                src="../../images/cooking_by_@thezachchoi.mp4"
-                loop
-                muted
-                type="video/mp4"
-                autoplay
-                playsinline
-              ></video>
-              <div class="video-overlay">
-                <div class="video-text">
-                  <h3>Chicken parm</h3>
-                  <p>⭐⭐⭐⭐⭐</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="recipe">
-              <video
-                src="../../images/cooking2_by_@bayashi.mp4"
-                loop
-                muted
-                type="video/mp4"
-                autoplay
-                playsinline
-              ></video>
-              <div class="video-overlay">
-                <div class="video-text">
-                  <h3>Roast Beef</h3>
-                  <p>⭐⭐⭐⭐</p>
-                </div>
-              </div>
-            </div>
-            <div class="recipe">
-              <video
-                src="../../images/cooking3_by_@butt.erhand.mp4"
-                loop
-                muted
-                type="video/mp4"
-                autoplay
-                playsinline
-              ></video>
-              <div class="video-overlay">
-                <div class="video-text">
-                  <h3>Roasted Garlic Bread</h3>
-                  <p>⭐⭐⭐⭐</p>
-                </div>
-              </div>
-            </div>
-            <div class="recipe view-more">View more →</div>
+        <div class="frigo-container">
+          <img
+            class="frigo"
+            src="../../images/polarisFridgeEmptyScreen.png"
+            alt="Image of a fridge"
+            width="50%"
+            height="50%"
+          />
+          <div id="starContainer">
+            <canvas id="starCanvas"></canvas>
           </div>
         </div>
-        <div>
-          <h3>Expiring Soon</h3>
-          <div class="scrollable">
-            <div class="food-card">
-              <img
-                class="food-img"
-                src="../../images/apple.png"
-                alt="Strawberries"
-              />
-              <div class="food-info">
-                <p class="food-name">Apple</p>
-                <p class="food-expire">Expires tomorrow</p>
+
+        <div class="screen" id="app">
+          <div class="top-bar">
+            <h3 id="date">Date</h3>
+            <h3 id="time">Time</h3>
+          </div>
+          <h1 style="text-align: center; margin: 0">Polaris</h1>
+          <!-- Page Content -->
+          <div class="content">
+            <div>
+              <h3>Recipes For You</h3>
+              <div class="scrollable">
+                <div class="recipe">
+                  <video
+                    src="../../images/cooking_by_@thezachchoi.mp4"
+                    loop
+                    muted
+                    type="video/mp4"
+                    autoplay
+                    playsinline
+                  ></video>
+                  <div class="video-overlay">
+                    <div class="video-text">
+                      <h3>Chicken parm</h3>
+                      <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="recipe">
+                  <video
+                    src="../../images/cooking2_by_@bayashi.mp4"
+                    loop
+                    muted
+                    type="video/mp4"
+                    autoplay
+                    playsinline
+                  ></video>
+                  <div class="video-overlay">
+                    <div class="video-text">
+                      <h3>Roast Beef</h3>
+                      <p>⭐⭐⭐⭐</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="recipe">
+                  <video
+                    src="../../images/cooking3_by_@butt.erhand.mp4"
+                    loop
+                    muted
+                    type="video/mp4"
+                    autoplay
+                    playsinline
+                  ></video>
+                  <div class="video-overlay">
+                    <div class="video-text">
+                      <h3>Roasted Garlic Bread</h3>
+                      <p>⭐⭐⭐⭐</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="recipe view-more">View more →</div>
               </div>
             </div>
+            <div>
+              <h3>Expiring Soon</h3>
+              <div class="scrollable">
+                <div class="food-card">
+                  <img
+                    class="food-img"
+                    src="../../images/apple.png"
+                    alt="Strawberries"
+                  />
+                  <div class="food-info">
+                    <p class="food-name">Apple</p>
+                    <p class="food-expire">Expires tomorrow</p>
+                  </div>
+                </div>
 
-            <div class="food-card">
-              <img class="food-img" src="../../images/apple.png" alt="Bread" />
-              <div class="food-info">
-                <p class="food-name">Apple</p>
-                <p class="food-expire">Expires in 3 days</p>
+                <div class="food-card">
+                  <img
+                    class="food-img"
+                    src="../../images/apple.png"
+                    alt="Bread"
+                  />
+                  <div class="food-info">
+                    <p class="food-name">Apple</p>
+                    <p class="food-expire">Expires in 3 days</p>
+                  </div>
+                </div>
+
+                <div class="food-card">
+                  <img
+                    class="food-img"
+                    src="../../images/apple.png"
+                    alt="Bread"
+                  />
+                  <div class="food-info">
+                    <p class="food-name">Apple</p>
+                    <p class="food-expire">Expires in 3 days</p>
+                  </div>
+                </div>
+
+                <div class="food-card">
+                  <img
+                    class="food-img"
+                    src="../../images/apple.png"
+                    alt="Bread"
+                  />
+                  <div class="food-info">
+                    <p class="food-name">Apple</p>
+                    <p class="food-expire">Expires in 4 days</p>
+                  </div>
+                </div>
+
+                <div class="food-card view-more">View more →</div>
               </div>
             </div>
+            <div>
+              <h3>Today's Nutrition Gaps</h3>
+              <div style="display: grid; grid-template-columns: auto auto">
+                <div class="nutrition-card">
+                  <div class="nutrition-header">
+                    <p class="nutrition-subtitle">
+                      Based on daily recommended intake
+                    </p>
+                  </div>
 
-            <div class="food-card">
-              <img class="food-img" src="../../images/apple.png" alt="Bread" />
-              <div class="food-info">
-                <p class="food-name">Apple</p>
-                <p class="food-expire">Expires in 3 days</p>
+                  <div class="nutrient-list">
+                    <div class="nutrient-item">
+                      <span class="nutrient-name">Iron</span>
+                      <span class="nutrient-status low">Low</span>
+                    </div>
+                    <div class="nutrient-item">
+                      <span class="nutrient-name">Vitamin D</span>
+                      <span class="nutrient-status low">Low</span>
+                    </div>
+                    <div class="nutrient-item">
+                      <span class="nutrient-name">Calcium</span>
+                      <span class="nutrient-status medium">Slightly Low</span>
+                    </div>
+                    <div class="nutrient-item">
+                      <span class="nutrient-name">Fiber</span>
+                      <span class="nutrient-status good">Good</span>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="../../images/Graph.png"
+                  alt="A Pie Chart in donut shape representing the recommandation nutrition percentage for the day"
+                  width="100%"
+                  height="100%"
+                  style="object-fit: contain; max-width: 300px; margin: auto"
+                />
               </div>
             </div>
+          </div>
 
-            <div class="food-card">
-              <img class="food-img" src="../../images/apple.png" alt="Bread" />
-              <div class="food-info">
-                <p class="food-name">Apple</p>
-                <p class="food-expire">Expires in 4 days</p>
-              </div>
+          <!-- Bottom Menu -->
+          <hr />
+          <div class="bottom-menu">
+            <div class="menu-item selected">
+              <i class="material-icons">home</i>
+              <span>Home</span>
             </div>
-
-            <div class="food-card view-more">View more →</div>
+            <div class="menu-item">
+              <i class="material-icons">kitchen</i>
+              <span>Inventory</span>
+            </div>
+            <div class="menu-item">
+              <i class="material-icons">shopping_cart</i>
+              <span>Order</span>
+            </div>
+            <div class="menu-item">
+              <i class="material-icons">menu_book</i>
+              <span>Recipes</span>
+            </div>
+            <div class="menu-item">
+              <i class="material-icons">settings</i>
+              <span>Settings</span>
+            </div>
           </div>
         </div>
-        <div>
-          <h3>Today's Nutrition Gaps</h3>
-          <div style="display: grid; grid-template-columns: auto auto">
-            <div class="nutrition-card">
-              <div class="nutrition-header">
-                <p class="nutrition-subtitle">
-                  Based on daily recommended intake
-                </p>
-              </div>
-
-              <div class="nutrient-list">
-                <div class="nutrient-item">
-                  <span class="nutrient-name">Iron</span>
-                  <span class="nutrient-status low">Low</span>
-                </div>
-                <div class="nutrient-item">
-                  <span class="nutrient-name">Vitamin D</span>
-                  <span class="nutrient-status low">Low</span>
-                </div>
-                <div class="nutrient-item">
-                  <span class="nutrient-name">Calcium</span>
-                  <span class="nutrient-status medium">Slightly Low</span>
-                </div>
-                <div class="nutrient-item">
-                  <span class="nutrient-name">Fiber</span>
-                  <span class="nutrient-status good">Good</span>
-                </div>
-              </div>
-            </div>
-            <img
-              src="../../images/Graph.png"
-              alt="A Pie Chart in donut shape representing the recommandation nutrition percentage for the day"
-              width="100%"
-              height="100%"
-              style="object-fit: contain; max-width: 300px; margin: auto"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Menu -->
-      <hr />
-      <div class="bottom-menu">
-        <div class="menu-item selected">
-          <i class="material-icons">home</i>
-          <span>Home</span>
-        </div>
-        <div class="menu-item">
-          <i class="material-icons">kitchen</i>
-          <span>Inventory</span>
-        </div>
-        <div class="menu-item">
-          <i class="material-icons">shopping_cart</i>
-          <span>Order</span>
-        </div>
-        <div class="menu-item">
-          <i class="material-icons">menu_book</i>
-          <span>Recipes</span>
-        </div>
-        <div class="menu-item">
-          <i class="material-icons">settings</i>
-          <span>Settings</span>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
