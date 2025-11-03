@@ -68,10 +68,6 @@ body {
   background-color: white; /*#1D598F*/
 }
 
-h3 {
-  text-align: center;
-}
-
 
 img.b {
   display: block;
@@ -86,12 +82,15 @@ img.c {
   margin-right: auto;*/
   width:500px;
   height:350px;
+  align:right;
 }
 img.d {
-  /*image à gauche*/
+  /*image à gauche
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
+  width:500px;
+  height:350px;
 }
 
 p {
@@ -117,6 +116,10 @@ a {
   background-color: #519ddb;
   border-radius: 6px;
   font-weight: bold;
+  top: 20%;
+  left: 25%;
+  -ms-transform: translate(100%, 0%);
+  transform: translate(100%, 0%);
 
 }
 
@@ -139,7 +142,6 @@ a {
   transform: translate(-100%, 75%);
 }
 
-
 .dd {
   text-align: right;
 }
@@ -159,7 +161,7 @@ a {
 }
 
 .separation {
-  background-color: rgb(155, 149, 149);
+  background-color:white;
 }
 
 /*images*/
@@ -180,7 +182,7 @@ img {vertical-align: middle;}
 
 .fade {
   animation-name: fade;
-  animation-duration: 3s;
+  animation-duration: 4s;
 }
 
 @keyframes fade {
@@ -194,7 +196,7 @@ img {vertical-align: middle;}
 }
 
 .cont .box { 
-                margin:50px; 
+                margin:0px; 
                 display:table; 
             } 
             .cont .box .box-row { 
