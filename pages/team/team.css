@@ -86,4 +86,30 @@
 
 .team-member h3 {
   margin-top: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.team-member button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.team-member button:hover {
+  background-color: #000000;
+}
+
+.team-member p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #ccc;
 }
