@@ -76,10 +76,33 @@ div2.flex-container2 > section:hover {
   transform: translateX(15px) scale(1.02);
 }
 
-div.details{
+div.detailsPage{
   color: white;
   background-color:black;
-  padding: 25px 44px 90vh;
+  padding: 25px 44px 20vh;
+}
+
+div2.options > section{
+  margin: 34px 150px 2px;
+  border-bottom: 1px solid white;
+  transition: transform 0.3s ease-in-out;
+  p{
+    position:relative;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+div2.options > section:hover{
+  cursor: pointer;
+}
+
+div2.options > section:active{
+  cursor: pointer;
+  transform: translateY(5px);
+  p{
+    z-index: 0;
+  }
 }
 
 /* Use media query and show the flex items vertically if screen width is less than 600px */
