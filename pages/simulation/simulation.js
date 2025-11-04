@@ -1,7 +1,7 @@
 import { strechCamera } from "./star_background.js";
 
 const app = document.querySelector(".screen");
-const beginBtn = document.querySelector(".begin-simulation-btn");
+const beginBtn = document.querySelector("#beginBtn");
 const frigoContainer = document.querySelector(".frigo-container");
 const frigo = document.querySelector(".frigo");
 const screenInteract = document.getElementById("starContainer");
@@ -20,16 +20,15 @@ async function beginSimulation() {
   }, 1600);
 
   setTimeout(() => {
-    positionStar();
+    positionStar(true);
   }, 1600 + 900 + 100);
 }
 
-let starAnimated = false;
 /**
  * Function which calculates where on the screen the interactable screen should be
  * This way, the interactable screen will appear exactly on the image regardless of the screen size
  */
-function positionStar() {
+function positionStar(animate) {
   if (isScreenVisible) {
     gsap.set(app, {
       top: "55%",
@@ -66,7 +65,7 @@ function positionStar() {
   app.style.width = `${screenWidth / 1.3}px`;
   app.style.height = `${screenHeight / 1.3}px`;
 
-  if (!starAnimated) {
+  if (animate) {
     gsap.to("#starContainer", {
       opacity: 1,
       duration: 1.5,
@@ -77,14 +76,13 @@ function positionStar() {
       y: 270,
       ease: "circ.out",
     });
-    starAnimated = true;
   }
 
   strechCamera();
 }
 
-window.addEventListener("resize", positionStar);
-window.addEventListener("scroll", positionStar);
+window.addEventListener("resize", () => positionStar(false));
+window.addEventListener("scroll", () => positionStar(false));
 document.getElementById("beginSimulation").addEventListener("click", () => {
   beginSimulation();
 });

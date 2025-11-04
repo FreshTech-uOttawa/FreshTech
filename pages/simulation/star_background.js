@@ -131,11 +131,11 @@ function setupCameraMovement() {
     camera.rotation.x = currentRotationX;
     camera.rotation.y = -currentRotationY;
 
-    if (!isSimulationStarted) {
-      camera.rotation.z += Math.random() * 0.0003;
-      camera.rotation.x += Math.random() * 0.0003;
-      camera.rotation.y += Math.random() * 0.0003;
-    }
+    // if (!isSimulationStarted) {
+    camera.rotation.z += Math.random() * 0.0003;
+    camera.rotation.x += Math.random() * 0.0003;
+    camera.rotation.y += Math.random() * 0.0003;
+    // }
 
     frameCount++;
     changeOpacity(scene.children.find((obj) => obj.type === "Points"));

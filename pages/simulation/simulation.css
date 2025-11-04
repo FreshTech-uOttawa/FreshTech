@@ -17,7 +17,7 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 html {
@@ -78,10 +78,10 @@ html {
   border: 2px white solid;
   text-shadow: 0 0 8px #fff, 0 0 2px #00c8ff00;
   animation: fade-in ease-in-out 3000ms forwards,
-    breathing-btn ease-in-out 3250ms 250ms infinite;
+    breathing-btn ease-in-out 2250ms 250ms infinite;
   opacity: 0;
   transition: all 600ms;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
 }
 
 .begin-simulation-btn:hover {
@@ -110,10 +110,11 @@ html {
   font-size: xxx-large;
   text-align: center;
   color: white;
-  text-shadow: 0 0 10px #fff, 0 0 25px #53a2f5;
+  text-shadow: 0 0 5px #fff, 0 0 10px #53a2f5;
   z-index: 2;
   position: relative;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 @keyframes title-glow {
@@ -161,7 +162,7 @@ html {
 .screen {
   display: none;
   opacity: 0;
-  position: absolute;
+  position: relative;
   color: #ebebeb;
   z-index: 2;
   border-radius: 30px;
@@ -178,6 +179,9 @@ html {
   );
   top: 25%;
   left: 30%;
+  z-index: 3;
+  position: fixed;
+  transform: none;
 }
 
 .top-bar {
@@ -557,4 +561,39 @@ html {
   display: block;
   background: transparent;
   margin: auto;
+}
+
+#simulation-section {
+  color: white;
+  padding: 0 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 92vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(12, 36, 62, 0.3),
+      rgba(8, 30, 50, 0.3)
+    ),
+    url("../../images/fridge-background.jpg") no-repeat fixed center/cover;
+  overflow: hidden;
+}
+
+#simulation-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
+  pointer-events: none;
+}
+
+#showcase-section {
+  height: 100vh;
+  padding: 20px;
 }

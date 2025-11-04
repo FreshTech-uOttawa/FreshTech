@@ -25,17 +25,22 @@
       <div style="z-index: 3" id="nav-container"></div>
     </header>
 
-    <canvas id="bgCanvas"></canvas>
-
     <main>
       <section id="simulation-section">
         <h1 class="title">Simulation</h1>
-        <button id="beginSimulation" class="button begin-simulation-btn">
-          Begin Simulation
-        </button>
+        <h2>Experience the next generation of connected home technology</h2>
       </section>
 
       <section id="showcase-section">
+        <canvas id="bgCanvas"></canvas>
+        <div
+          id="beginBtn"
+          style="height: 100%; display: flex; align-content: center"
+        >
+          <button id="beginSimulation" class="button begin-simulation-btn">
+            Begin Simulation
+          </button>
+        </div>
         <button id="stopSimulation" class="close-btn">
           <i class="material-icons">close</i>
         </button>
@@ -52,7 +57,6 @@
             <canvas id="starCanvas"></canvas>
           </div>
         </div>
-
         <div class="screen" id="app">
           <div class="top-bar">
             <h3 id="date">Date</h3>
