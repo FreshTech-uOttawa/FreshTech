@@ -16,6 +16,8 @@ Second header (h2): 28px
 
 Third Header (h3): 22px
 
+Fourth Header (h4): 20px
+
 Text: 15px
 
 ## Color Palette
