@@ -22,7 +22,8 @@ section.intro {
       rgb(83, 162, 245, 0.3),
       rgba(8, 30, 50, 0.3)
     ),
-    url("../../images/ProductDesctriptionBackground.jpg") no-repeat fixed center/cover;
+    url("../../images/ProductDesctriptionBackground.jpg") no-repeat fixed
+      center/cover;
   overflow: hidden;
 }
 
@@ -35,9 +36,13 @@ div.flex-container {
   padding: 100px 0px;
   display: flex;
   flex-direction: row;
-  background: 
-    linear-gradient(to bottom right, rgb(15, 55, 92, 0.95), rgb(7, 21, 36, 0.95)),
-    url("../../images/marble-texture.jpg") repeat;
+  /* background: linear-gradient(
+      to bottom right,
+      rgb(15, 55, 92, 0.95),
+      rgb(7, 21, 36, 0.95)
+    ),
+    url("../../images/marble-texture.jpg") repeat; */
+  background: transparent;
   overflow: hidden;
 }
 
@@ -54,7 +59,7 @@ div.flex-container > div {
 }
 
 .fridge-container img {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   object-fit: cover; /* Scales the image to cover the container while preserving aspect ratio */
   object-position: center; /* Centers the image within the container (default) */
@@ -76,38 +81,49 @@ div2.flex-container2 > section:hover {
   transform: translateX(15px) scale(1.02);
 }
 
-div.detailsPage{
+div.detailsPage {
   color: white;
-  background-color:black;
+  background-color: black;
   padding: 25px 44px 20vh;
 }
 
-div2.options > section{
+div2.options > section {
   margin: 34px 150px 2px;
   border-bottom: 1px solid white;
   transition: transform 0.3s ease-in-out;
-  p{
-    position:relative;
+  p {
+    position: relative;
     overflow: hidden;
     z-index: -1;
   }
 }
 
-div2.options > section:hover{
+div2.options > section:hover {
   cursor: pointer;
 }
 
-div2.options > section:active{
+div2.options > section:active {
   cursor: pointer;
   transform: translateY(5px);
-  p{
+  p {
     z-index: 0;
   }
 }
 
 /* Use media query and show the flex items vertically if screen width is less than 600px */
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   div.flex-container {
     flex-direction: column;
   }
+}
+
+#bgCanvas {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
 }
