@@ -95,7 +95,7 @@
   color: #ccc;
 }
 
-.material-symbols-outlined {
+#arrow-btn .material-symbols-outlined {
   font-size: 3rem !important;
   color: #fff;
   cursor: pointer;
@@ -104,7 +104,7 @@
   transition: transform 0.3s;
 }
 
-.material-symbols-outlined:hover {
+#arrow-btn .material-symbols-outlined:hover {
   transform: scale(1.2);
 }
 
