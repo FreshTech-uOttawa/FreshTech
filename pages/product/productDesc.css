@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 h4 {
   font-size: 20px;
 }
@@ -107,6 +111,30 @@ div2.options > section:active {
   transform: translateY(5px);
   p {
     z-index: 0;
+  }
+}
+
+/* Arrow Button Styling */
+#arrow-btn .material-symbols-outlined {
+  font-size: 3rem !important;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 1px 15px rgba(7, 7, 7, 0.3);
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+}
+
+#arrow-btn .material-symbols-outlined:hover {
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
 
