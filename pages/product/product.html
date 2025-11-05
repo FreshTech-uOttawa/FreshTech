@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Product Features - Polaris</title>
+    <link rel="stylesheet" href="productDesc.css" />
+    <script src="../../include.js"></script>
+    <script src="../../general_star_background.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/loaders/FBXLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fflate@latest/umd/index.min.js"></script>
+    <link rel="stylesheet" href="../../global_style.css" />
+  </head>
+  <header>
+    <div id="nav-container"></div>
+  </header>
 
-<head>
-  <title>Product Features - Polaris</title>
-  <link rel="stylesheet" href="productDesc.css">
-  <script src="../../include.js"></script>
-  <script src="../../general_star_background.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/loaders/FBXLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fflate@latest/umd/index.min.js"></script>
-  <link rel="stylesheet" href="../../global_style.css" /> 
-</head>
-<header>
-  <div id="nav-container"></div>
-</header>
-
-<!-- <h1>Polaris™ Smart Fridge by FreshTech</h1>
+  <!-- <h1>Polaris™ Smart Fridge by FreshTech</h1>
  comment -->
 
-<section class="intro">
-  <h1>The future of freshness.</h2>
-  <h4>
-    Meet <em>Polaris</em>, the intelligent refrigerator that doesn't just
-    store your food, but takes care of it. Designed by <em>FreshTech</em>,
-    Polaris uses smart sensors and AI-driven insights to help you eat better,
-    waste less, and live healthier.
-  </h4>
-</section>
+  <section class="intro">
+    <h1>The future of freshness.</h1>
+    <h4>
+      Meet <em>Polaris</em>, the intelligent refrigerator that doesn't just
+      store your food, but takes care of it. Designed by <em>FreshTech</em>,
+      Polaris uses smart sensors and AI-driven insights to help you eat better,
+      waste less, and live healthier.
+    </h4>
+    <a id="arrow-btn" href="#scrollTo">
+      <span class="material-symbols-outlined">keyboard_double_arrow_down</span>
+    </a>
+  </section>
   <canvas id="bgCanvas"></canvas>
 
-<div class="flex-container">
-  <div class="fridge-container">
-    <img src="../../images/PolarisFridgeWithScreen.jpg"/>
+  <section id="scrollTo">
+    <div class="flex-container">
+      <div class="fridge-container">
+        <img src="../../images/PolarisFridgeWithScreen.jpg" />
+      </div>
+      <div2 class="flex-container2">
+        <section class="freshTrack">
+          <h3>Freshness Tracking</h3>
+          <p>
+            Polaris monitors the condition of your food in real time and alerts
+            you when items are about to spoil, helping you reduce waste and save
+            money.
+          </p>
+        </section>
+        <section class="groceryOrder">
+          <h3>Smart Grocery Ordering</h3>
+          <p>
+            Give Polaris your weekly budget and let it do the shopping for you.
+            It automatically finds the best deals from nearby grocery stores,
+            prioritizing sales and your preferred brands.
+          </p>
+        </section>
+        <section class="recipeInspo">
+          <h3>Recipe Inspiration</h3>
+          <p>
+            Polaris suggests healthy, delicious recipes based on what's in your
+            fridge and what's easily available nearby.
+          </p>
+        </section>
+        <section class="persNutri">
+          <h3>Personalized Nutrition</h3>
+          <p>
+            Polaris learns your eating habits and offers tailored dietary
+            recommendations to help you maintain a balanced diet, whether you're
+            vegan, high-protein, or just aiming for healthier choices.
+          </p>
+        </section>
+      </div2>
+    </div>
+  </section>
+
+  <div class="detailsPage">
+    <h2>Fridge Details</h2>
+    <div2 class="options">
+      <section>
+        <h3>Capacity</h3>
+        <p>123456</p>
+      </section>
+      <section>
+        <h3>Physical specifications</h3>
+        <p>123456</p>
+      </section>
+      <section>
+        <h3>Cooling Features</h3>
+        <p>123456</p>
+      </section>
+      <section>
+        <h3>Performance</h3>
+        <p>123456</p>
+      </section>
+      <section>
+        <h3>Energy</h3>
+        <p>123456</p>
+      </section>
+      <section>
+        <h3>Accesibility Features</h3>
+        <p>123456</p>
+      </section>
+    </div2>
   </div>
-  <div2 class="flex-container2">
-
-    <section class="freshTrack">
-      <h3>Freshness Tracking</h3>
-      <p>
-        Polaris monitors the condition of your food in real time and alerts you
-        when items are about to spoil, helping you reduce waste and save money.
-      </p>
-    </section>
-    <section class="groceryOrder">
-      <h3>Smart Grocery Ordering</h3>
-      <p>
-        Give Polaris your weekly budget and let it do the shopping for you. It
-        automatically finds the best deals from nearby grocery stores,
-        prioritizing sales and your preferred brands.
-      </p>
-    </section>
-    <section class="recipeInspo">
-      <h3>Recipe Inspiration</h3>
-      <p>
-        Polaris suggests healthy, delicious recipes based on what's in your fridge
-        and what's easily available nearby.
-      </p>
-    </section>
-    <section class="persNutri">
-      <h3>Personalized Nutrition</h3>
-      <p>
-        Polaris learns your eating habits and offers tailored dietary
-        recommendations to help you maintain a balanced diet, whether you're
-        vegan, high-protein, or just aiming for healthier choices.
-      </p>
-    </section>
-  </div2>
-</div>
-
-<div class="detailsPage">
-  <h2>Fridge Details</h2>
-  <div2 class="options">
-    <section><h3>Capacity</h3><p>123456</p></section>
-    <section><h3>Physical specifications</h3><p>123456</p></section>
-    <section><h3>Cooling Features</h3><p>123456</p></section>
-    <section><h3>Performance</h3><p>123456</p></section>
-    <section><h3>Energy</h3><p>123456</p></section>
-    <section><h3>Accesibility Features</h3><p>123456</p></section>
-  </div2>
-</div>
-
 </html>
