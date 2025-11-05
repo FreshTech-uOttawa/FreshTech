@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 .title-section {
   text-align: center;
   background-color: #f4f4f4;
@@ -7,7 +11,7 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-image: url('https://www.shutterstock.com/image-photo/silhouettes-diverse-business-people-working-600nw-1937014780.jpg');
+  background-image: url("https://www.shutterstock.com/image-photo/silhouettes-diverse-business-people-working-600nw-1937014780.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,44 +21,8 @@
   font-size: 40px;
   font-weight: bold;
   color: white;
-  text-shadow:
-    0 0 5px #00b3ff87,
-    0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 40px #0099ff,
-    0 0 80px #0077ffaf,
-    0 0 100px #2db0f7;
-}
-
-
-.down-arrow {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 50px solid rgb(255, 255, 255); 
-  margin-top: 30px;
-  filter:
-    drop-shadow(0 0 5px #00b3ff87)
-    drop-shadow(0 0 10px #00b3ff)
-    drop-shadow(0 0 20px #00b3ff)
-    drop-shadow(0 0 40px #0099ff)
-    drop-shadow(0 0 80px #0077ffaf)
-    drop-shadow(0 0 100px #2db0f7);
- cursor: pointer;
- transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.down-arrow:hover {
-  transform: translateY(-5px);
-  filter: 
-    drop-shadow(0 0 5px #00b3ff87)
-    drop-shadow(0 0 10px #00b3ff)
-    drop-shadow(0 0 20px #00b3ff)
-    drop-shadow(0 0 40px #0099ff)
-    drop-shadow(0 0 80px #0077ffaf)
-    drop-shadow(0 0 100px #2db0f7)
-    drop-shadow(0 0 10px #00aaff);
+  text-shadow: 0 0 5px #00b3ff87, 0 0 10px #00b3ff, 0 0 20px #00b3ff,
+    0 0 40px #0099ff, 0 0 80px #0077ffaf, 0 0 100px #2db0f7;
 }
 
 .team-container {
@@ -64,7 +32,7 @@
   gap: 40px;
   justify-content: center;
   padding: 20px;
-  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolour-night-sky-background_1048-16653.jpg?semt=ais_hybrid&w=740&q=80');
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolour-night-sky-background_1048-16653.jpg?semt=ais_hybrid&w=740&q=80");
   background-size: cover;
 }
 
@@ -125,4 +93,27 @@
   font-weight: 500;
   margin-top: 10px;
   color: #ccc;
+}
+
+.material-symbols-outlined {
+  font-size: 3rem !important;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 1px 15px rgba(7, 7, 7, 0.3);
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+}
+
+.material-symbols-outlined:hover {
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
