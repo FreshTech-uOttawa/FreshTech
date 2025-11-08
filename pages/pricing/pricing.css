@@ -158,6 +158,11 @@
   vertical-align: top;
   box-shadow: 0 10px rgb(166, 199, 249, 0);
   transition: box-shadow 0.4s ease, transform 0.4s ease;
+  background: linear-gradient(
+    to bottom right,
+    #0f375ca4,
+    rgba(7, 21, 36, 0.448)
+  );
 }
 
 .tier::before {
@@ -239,6 +244,11 @@
   overflow: hidden;
   box-shadow: 0 0 25px rgb(19, 70, 117, 0);
   transition: box-shadow 0.4s ease;
+  background: linear-gradient(
+    to bottom right,
+    #0f375ca4,
+    rgba(7, 21, 36, 0.448)
+  );
 }
 
 .comparison-table::before {
