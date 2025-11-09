@@ -16,7 +16,7 @@
   opacity: 100%;
   animation: fadeIn 1.5s ease forwards;
   background-size: cover;
-  line-height: 200px;
+  /* line-height: 200px; */
 }
 
 #haut-page::before {
@@ -41,7 +41,15 @@ h2 {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  text-shadow: 0 1px 15px rgba(7, 7, 7, 0.3);
+  text-shadow: 0 5px 15px rgba(7, 7, 7, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: 0 5px 30px rgba(7, 7, 7, 0.794);
 }
 
 @keyframes bounce {
@@ -160,6 +168,7 @@ a {
 .separation {
   color: white;
   background-color: rgba(255, 255, 255, 0);
+  padding: 30px;
 }
 
 /*images*/
@@ -218,7 +227,7 @@ img {
   text-align: left;
 }
 .cont .box .box-cell.box1 {
-  text-align: justify;
+  /* text-align: justify; */
   padding-right: 0px;
   padding-left: 0px;
 }
@@ -226,8 +235,8 @@ img {
   display: table-cell;
 }
 .cont .box .box-cell.box2 {
-  text-align: justify;
-  padding-left: 16%;
+  /* text-align: justify; */
+  /* padding-left: 16%; */
 }
 
 #bgCanvas {
