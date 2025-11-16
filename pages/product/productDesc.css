@@ -85,18 +85,6 @@ div2.flex-container2 > section:hover {
   transform: translateX(15px) scale(1.02);
 }
 
-div.detailsPage {
-  color: white;
-  background-color: black;
-  padding: 25px 44px 20vh;
-}
-
-div.accordion {
-  color: white;
-  background-color: black;
-  padding: 25px 100px 39vh;
-}
-
 /* Arrow Button Styling */
 #arrow-btn .material-symbols-outlined {
   font-size: 3rem !important;
@@ -139,3 +127,53 @@ div.accordion {
   display: block;
 }
 
+div.detailsPage {
+  color: white;
+  background-color: black;
+  padding: 25px 44px 20vh;
+}
+
+div.accordion {
+  color: white;
+  background-color: black;
+  padding: 25px 100px 26vh;
+} 
+
+.detailsPage .accordion-item {
+  background-color: #000000;      
+  border: 1px solid #1D598F;      
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.detailsPage .accordion-button {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 20px; 
+  padding: 18px;
+  border: none;
+  box-shadow: none;
+}
+
+.detailsPage .accordion-button:focus {
+  box-shadow: none;
+}
+
+.detailsPage .accordion-button:not(.collapsed) {
+  background-color: #1D598F;    
+  color: #FFFFFF;
+}
+
+.detailsPage .accordion-body {
+  background-color: #000000;
+  color: #9C9C9C;              
+  border-top: 1px solid #1D598F;
+  padding: 18px 20px;
+  font-size: 15px;
+}
+
+.detailsPage .accordion {
+  padding-top: 10px;
+}
