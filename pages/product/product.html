@@ -11,6 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fflate@latest/umd/index.min.js"></script>
     <link rel="stylesheet" href="../../global_style.css" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Bootstrap demo</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </head>
   <header>
     <div id="nav-container"></div>
@@ -76,31 +81,107 @@
 
   <div class="detailsPage">
     <h2>Fridge Details</h2>
-    <div2 class="options">
-      <section>
-        <h3>Capacity</h3>
-        <p>123456</p>
-      </section>
-      <section>
-        <h3>Physical specifications</h3>
-        <p>123456</p>
-      </section>
-      <section>
-        <h3>Cooling Features</h3>
-        <p>123456</p>
-      </section>
-      <section>
-        <h3>Performance</h3>
-        <p>123456</p>
-      </section>
-      <section>
-        <h3>Energy</h3>
-        <p>123456</p>
-      </section>
-      <section>
-        <h3>Accesibility Features</h3>
-        <p>123456</p>
-      </section>
-    </div2>
+
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+        Capacity
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>Total storage capacity</strong> 26.5 cu. ft.
+      </div>
+    </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Physical Specifications
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+         <ul>
+           <li><strong>Dimensions:</strong> 70" (H) x 36" (W) x 34" (D)</li>
+           <li><strong>Weight:</strong> 280 lbs</li>
+           <li><strong>Finish Options:</strong> Stainless Steel, Matte Black, Polar White</li>
+           <li><strong>Door Style:</strong> French-door with soft-close hinges</li>
+          <li><strong>Interior Lighting:</strong> Full-coverage LED paneling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Cooling Features
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <ul>
+         <li><strong>Multi-Zone Cooling:</strong> Independent temperature control for each compartment</li>
+         <li><strong>FreshTrack™ Sensors:</strong> Real-time temperature monitoring</li>
+         <li><strong>Humidity-Controlled Crispers:</strong> Keeps produce fresher for longer</li>
+         <li><strong>RapidFreeze & QuickCool:</strong> Quickly restores optimal temperature after loading groceries</li>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Performance
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+          <li><strong>Inverter Compressor:</strong> Quieter operation with improved durability</li>
+          <li><strong>Low-Vibration Cooling:</strong> Keeps noise under 40 dB</li>
+          <li><strong>Smart Diagnostics:</strong> System auto-monitors performance</li>
+          <li><strong>Temperature Accuracy:</strong> Maintains within ±1°C</li>
+         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Energy
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+          <li><strong>Energy Star® Certified</strong> for high efficiency</li>
+          <li><strong>Adaptive Power Mode:</strong> Reduces power usage during low-activity hours</li>
+          <li><strong>Eco-Friendly Refrigerant:</strong> Uses R600a for reduced environmental impact</li>
+          <li><strong>Annual Energy Consumption:</strong> Approx. 630 kWh</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+        Accesibility Features
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <ul>
+          <li><strong>Easy-Glide Freezer Drawer:</strong> Opens with minimal force</li>
+          <li><strong>Reversible Shelving:</strong> Adjustable for different reach and mobility needs</li>
+          <li><strong>High-Contrast Display:</strong> Clear and easy to read with tactile feedback</li>
+          <li><strong>Wide-Angle Door Swing:</strong> Improves visibility and reach</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 </html>
