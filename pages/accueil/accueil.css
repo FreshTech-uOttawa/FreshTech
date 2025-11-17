@@ -162,6 +162,133 @@ a {
   background-color: rgba(255, 255, 255, 0);
 }
 
+.featured-section {
+  padding: 60px 20px;
+  background-image: linear-gradient(
+    to left top,
+    rgba(5, 25, 55, 0.432),
+    #05193742,
+    #0022558c,
+    #00287349,
+    #15309159,
+    #3531ae42
+  );
+}
+
+.featured-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.featured-text h3 {
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.demo-section,
+.pricing-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.demo-section {
+  background-image: linear-gradient(
+    to right top,
+    rgba(30, 30, 135, 0.295),
+    #1e1e8750,
+    #23218246,
+    #26257d5e,
+    #2a277748,
+    #2e2a7250
+  );
+}
+
+.pricing-section {
+  background-image: linear-gradient(
+    to left top,
+    rgba(5, 25, 55, 0.432),
+    #05193742,
+    #0022558c,
+    #00287349,
+    #15309159,
+    #3531ae42
+  );
+}
+
+.pricing-section h3 {
+  margin-bottom: 25px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides.fade {
+  display: block;
+  animation: fade 0.5s;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dots-container {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #519ddb;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button-primary {
+  background-color: #519ddb;
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: #3d7aad;
+  transform: translateY(-2px);
+}
+
 /*images*/
 
 * {
@@ -204,7 +331,6 @@ img {
     font-size: 11px;
   }
 }
-
 .cont .box {
   margin: 0px;
   display: table;
