@@ -85,8 +85,8 @@ img.c {
   /*display: block;
   margin-left: auto;
   margin-right: auto;*/
-  width: 650px;
-  height: 450px;
+  width: 500px;
+  height: 350px;
   border-radius: 5px;
 }
 
@@ -170,6 +170,7 @@ a {
   color: white;
   background-color: rgba(255, 255, 255, 0);
   padding: 80px;
+  margin: auto;
 }
 
 /*images*/
@@ -220,7 +221,8 @@ img {
   display: table;
   margin-left: 0%;
   margin-right: 0;
-  width: 100%;
+  width: 130%;
+  padding-bottom: 50px;
 }
 .cont .box .box-row {
   display: table-row;
